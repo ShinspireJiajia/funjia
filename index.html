@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Fun 嘉｜嘉義旅遊資訊</title>
+  <meta name="description" content="Fun 嘉 — 手機優先的嘉義旅遊資訊平台,天氣、景點美食、公車停車、AI 語音助理一站查詢。" />
+
+  <!-- Font Awesome 圖示 CDN(依規範以 CDN 引入,降低專案體積) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- 全站共用樣式 -->
+  <link rel="stylesheet" href="css/style-base.css" />
+  <link rel="stylesheet" href="css/a11y.css" />
+  <link rel="stylesheet" href="css/masterpage.css" />
+
+  <!-- 全站多語系與無障礙操作(字級調整 / 高對比模式)引擎,盡早載入以避免畫面閃爍 -->
+  <script src="js/core/i18n-core.js"></script>
+  <script src="js/core/a11y-init.js"></script>
+</head>
+<body>
+  <!-- ============ Header 區塊:App 品牌列 ============ -->
+  <header class="app-header">
+    <div class="app-header__brand">
+      <span class="app-header__logo"><i class="fa-solid fa-mountain-sun"></i></span>
+      <span class="app-header__title">Fun 嘉</span>
+      <span class="app-header__badge" title="此為提案原型,資料為示意內容,非即時正確資訊">DEMO</span>
+    </div>
+    <div class="app-header__lang-wrapper">
+      <button
+        class="app-header__lang"
+        id="headerLangBtn"
+        aria-label="語言與無障礙設定"
+        data-i18n="langBtnAria"
+        data-i18n-attr="aria-label"
+        title="語言與無障礙設定"
+      >
+        <i class="fa-solid fa-universal-access"></i>
+        <span data-i18n="langBtnLabel">設定</span>
+      </button>
+      <div class="lang-popover a11y-panel" id="langPopover"></div>
+    </div>
+  </header>
+
+  <!-- ============ Body 區塊:以 iframe 嵌入功能模組頁面(masterpage 架構) ============ -->
+  <main class="app-body">
+    <iframe id="contentFrame" class="content-frame" src="pages/home.html" title="Fun 嘉功能內容"></iframe>
+  </main>
+
+  <!-- ============ 懸浮快捷鍵:一鍵進入「揪團旅行」功能 ============ -->
+  <button
+    class="fab-shortcut"
+    id="fabGroupTravel"
+    data-page="group-travel.html"
+    aria-label="快速進入揪團旅行"
+    data-i18n="fabGroupTravelAria"
+    data-i18n-attr="aria-label"
+  >
+    <i class="fa-solid fa-people-group"></i>
+    <span>FUN嘉</span>
+  </button>
+
+  <!-- ============ Footer 區塊:底部導覽列(手機優先) ============ -->
+  <footer class="bottom-nav" id="bottomNav">
+    <div class="bottom-nav__inner">
+      <button class="bottom-nav__item is-active" data-page="home.html">
+        <i class="fa-solid fa-house"></i>
+        <span data-i18n="navHome">首頁</span>
+      </button>
+      <button class="bottom-nav__item" data-page="search.html?type=attractions">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span data-i18n="navDiscover">發現</span>
+      </button>
+      <button class="bottom-nav__item" data-page="assistant.html">
+        <i class="fa-solid fa-robot"></i>
+        <span data-i18n="navAssistant">嘉義幫</span>
+      </button>
+      <button class="bottom-nav__item" data-page="carbon-wallet.html">
+        <i class="fa-solid fa-wallet"></i>
+        <span data-i18n="navWallet">減碳錢包</span>
+      </button>
+      <button class="bottom-nav__item" data-page="more.html">
+        <i class="fa-solid fa-ellipsis"></i>
+        <span data-i18n="navMore">更多功能</span>
+      </button>
+    </div>
+  </footer>
+
+  <script src="js/core/a11y-panel.js"></script>
+  <script src="js/main-script.js"></script>
+</body>
+</html>

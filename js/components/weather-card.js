@@ -1,6 +1,7 @@
 /**
  * weather-card.js
- * 首頁天氣資訊卡元件:預設顯示嘉義市,可點擊地點切換(嘉義市/阿里山/東石/布袋)。
+ * 首頁天氣資訊卡元件:依序顯示太保市、布袋鎮、阿里山鄉、嘉義市(由 data 中 homeTab 標記篩選),
+ * 預設選中第一個分頁(太保市),可點擊地點切換。
  * 同時負責「近三日預報」區塊,兩者共用目前選中的地點。
  */
 
@@ -10,7 +11,13 @@ window.FunJia = window.FunJia || {};
   "use strict";
 
   function renderWeatherCard(container, forecastContainer, weatherData) {
-    var activeId = weatherData.locations[0].id;
+    var tabLocations = weatherData.locations.filter(function (loc) {
+      return loc.homeTab;
+    });
+    if (!tabLocations.length) {
+      tabLocations = weatherData.locations;
+    }
+    var activeId = tabLocations[0].id;
 
     function paint() {
       var active = weatherData.locations.find(function (loc) {
@@ -22,7 +29,7 @@ window.FunJia = window.FunJia || {};
         '<div class="weather-card">' +
         '<div class="weather-card__header">' +
         '<div class="weather-card__tabs">' +
-        weatherData.locations
+        tabLocations
           .map(function (loc) {
             return (
               '<button class="weather-tab' +

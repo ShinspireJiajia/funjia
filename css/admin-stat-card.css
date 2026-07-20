@@ -1,0 +1,101 @@
+/* ===================================================================
+   admin-stat-card.css
+   後台共用元件:KPI 統計卡片(含走勢條) / 排行清單條狀圖
+=================================================================== */
+
+.adm-stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 900px) {
+  .adm-stat-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.adm-stat-card {
+  background: var(--adm-surface);
+  border: 1px solid var(--adm-border);
+  border-radius: var(--adm-radius-lg);
+  padding: 16px 18px;
+  box-shadow: var(--adm-shadow-sm);
+}
+
+.adm-stat-card .label {
+  font-size: 12px;
+  color: var(--adm-text-muted);
+}
+
+.adm-stat-card .value {
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+.adm-stat-card .delta {
+  font-size: 12px;
+  color: var(--adm-primary);
+  margin-top: 3px;
+  font-weight: 600;
+}
+
+.adm-spark {
+  margin-top: 10px;
+  height: 30px;
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.adm-spark i {
+  flex: 1;
+  background: var(--adm-primary-bg);
+  border-radius: 2px 2px 0 0;
+}
+
+.adm-spark i:last-child {
+  background: var(--adm-primary);
+}
+
+.adm-bar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.adm-bar-row {
+  display: grid;
+  grid-template-columns: 150px 1fr 50px;
+  gap: 10px;
+  align-items: center;
+  font-size: 12.5px;
+}
+
+@media (max-width: 700px) {
+  .adm-bar-row {
+    grid-template-columns: 90px 1fr 44px;
+  }
+}
+
+.adm-bar-track {
+  height: 12px;
+  background: var(--adm-surface-alt);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.adm-bar-fill {
+  height: 100%;
+  background: var(--adm-primary);
+  border-radius: 4px;
+}
+
+.adm-bar-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--adm-text-muted);
+}

@@ -1,0 +1,92 @@
+/* ===================================================================
+   admin-stop-planner.css
+   後台共用元件:推薦行程範本「站點規劃」清單(上移／下移／移除)
+=================================================================== */
+
+.adm-stop-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.adm-stop-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border: 1px solid var(--adm-border);
+  border-radius: var(--adm-radius-sm);
+  background: var(--adm-surface-alt);
+}
+
+.adm-stop-item__order {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--adm-primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.adm-stop-item__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.adm-stop-item__body strong {
+  display: block;
+  font-size: 13px;
+}
+
+.adm-stop-item__body input {
+  border: none;
+  background: none;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--adm-text);
+  width: 100%;
+  padding: 2px 0;
+}
+
+.adm-stop-item__body input.note-input,
+.adm-stop-item__body input.transport-input {
+  font-size: 11.5px;
+  font-weight: 400;
+  color: var(--adm-text-muted);
+}
+
+.adm-stop-item__actions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.adm-stop-item__actions button {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  color: var(--adm-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+.adm-stop-item__actions button:hover {
+  background: var(--adm-surface);
+}
+
+.adm-stop-add-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.adm-stop-add-row input {
+  flex: 1;
+}

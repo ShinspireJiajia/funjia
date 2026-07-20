@@ -1,0 +1,33 @@
+/* ===================================================================
+   page-header.css
+   各功能頁面(pages/*.html)共用的內頁標頭樣式,含返回按鈕與頁面標題。
+=================================================================== */
+
+.page-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 12px var(--space-md);
+  background: var(--color-bg-soft);
+}
+
+.page-header__back {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.page-header h1 {
+  font-size: 17px;
+  font-weight: 700;
+}

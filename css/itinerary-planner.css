@@ -1,0 +1,170 @@
+/* ===================================================================
+   itinerary-planner.css
+   智慧減碳排程頁(pages/itinerary-planner.html)版面樣式
+   共用 group-travel.css 的表單/切換按鈕/景點選取樣式,此檔僅補充本頁專屬樣式。
+=================================================================== */
+
+.planner-page {
+  padding: var(--space-md) var(--space-md) var(--space-xl);
+}
+
+.planner-hint {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.planner-form {
+  padding: var(--space-md);
+}
+
+.planner-form .btn {
+  margin-top: var(--space-sm);
+}
+
+.day-stepper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.day-stepper label {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+.day-stepper input {
+  width: 72px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: 14px;
+  background: var(--color-bg);
+}
+
+/* -------- 行程結果:總覽摘要 -------- */
+.plan-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  margin: var(--space-lg) 0 var(--space-md);
+}
+
+.plan-summary__tile {
+  text-align: center;
+}
+
+.plan-summary__tile strong {
+  display: block;
+  font-size: 16px;
+  color: var(--color-primary-dark);
+}
+
+.plan-summary__tile span {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.plan-summary__saved {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* -------- 行程結果:分日時間軸 -------- */
+.day-block {
+  margin-bottom: var(--space-md);
+  overflow: hidden;
+}
+
+.day-block__header {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.day-block__items {
+  padding: var(--space-sm) var(--space-md);
+}
+
+.plan-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.plan-item:first-child {
+  border-top: none;
+}
+
+.plan-item__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 14px;
+  background: var(--color-primary-bg);
+  color: var(--color-primary);
+}
+
+.plan-item.kind-travel .plan-item__icon {
+  background: var(--color-accent-bg);
+  color: var(--color-accent-dark);
+}
+
+.plan-item.kind-meal .plan-item__icon,
+.plan-item.kind-lodging .plan-item__icon,
+.plan-item.kind-parking .plan-item__icon {
+  background: var(--color-bg-soft);
+  color: var(--color-text-muted);
+}
+
+.plan-item__body p {
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.plan-item__body span {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* -------- 採用行程 -------- */
+.plan-adopt-btn {
+  width: 100%;
+  margin-top: var(--space-sm);
+}
+
+.plan-adopt-result {
+  margin-top: var(--space-sm);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background: var(--color-primary-bg);
+  color: var(--color-primary-dark);
+  font-size: 13px;
+  line-height: 1.6;
+  display: none;
+}
+
+.plan-adopt-result.is-visible {
+  display: block;
+}

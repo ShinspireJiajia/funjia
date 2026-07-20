@@ -1,0 +1,272 @@
+/* ===================================================================
+   style-base.css
+   全站共用的基礎樣式:CSS 變數(色彩/間距)、reset、字型、RWD 斷點
+   設計主題:嘉義意象 — 森林綠(阿里山林相) + 大地暖橙(日出/茶山)
+=================================================================== */
+
+:root {
+  /* -------- 品牌色彩 -------- */
+  --color-primary: #2f6b3d;        /* 森林綠:主色 */
+  --color-primary-dark: #204a2a;
+  --color-primary-light: #5c9468;
+  --color-primary-bg: #eaf2ea;     /* 主色淺底(標籤、選中狀態) */
+
+  --color-accent: #e08a3c;         /* 大地暖橙:強調色/CTA */
+  --color-accent-dark: #c06b22;
+  --color-accent-bg: #fbeee0;
+
+  --color-bg: #ffffff;
+  --color-bg-soft: #f1efe6;        /* 米白底,呼應茶山紙感 */
+  --color-surface: #ffffff;
+  --color-border: #e0ddd0;
+
+  --color-text: #2b2b28;
+  --color-text-muted: #74716a;
+  --color-text-on-primary: #ffffff;
+
+  --color-danger: #d9534f;
+  --color-success: #3f8f5f;
+  --color-warning: #e0a83c;
+
+  /* -------- 間距 -------- */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* -------- 圓角/陰影 -------- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --shadow-card: 0 2px 10px rgba(43, 43, 40, 0.08);
+  --shadow-elevated: 0 6px 20px rgba(43, 43, 40, 0.14);
+
+  /* -------- 版面 -------- */
+  --header-height: 56px;
+  --bottom-nav-height: 64px;
+  --max-content-width: 480px; /* 手機優先,平板/桌機置中呈現 */
+
+  /* -------- 字型 -------- */
+  --font-family-base: "PingFang TC", "Microsoft JhengHei", "Noto Sans TC",
+    system-ui, -apple-system, sans-serif;
+}
+
+/* -------- Reset -------- */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-base);
+  color: var(--color-text);
+  background: var(--color-bg-soft);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* -------- 共用工具類別 -------- */
+.container {
+  width: 100%;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-text-on-primary);
+}
+
+.btn-accent {
+  background: var(--color-accent);
+  color: var(--color-text-on-primary);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+
+.section-title h2 {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.section-title .link-more {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--color-primary-bg);
+  color: var(--color-primary-dark);
+}
+
+.tag.tag-accent {
+  background: var(--color-accent-bg);
+  color: var(--color-accent-dark);
+}
+
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  color: var(--color-text-muted);
+}
+
+.empty-state i {
+  font-size: 32px;
+  margin-bottom: var(--space-sm);
+  color: var(--color-primary-light);
+}
+
+/* -------- POI 佔位圖(尚無真實照片時,以圖示+漸層取代) -------- */
+.poi-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.poi-placeholder i {
+  font-size: 28px;
+}
+
+.poi-placeholder.size-sm {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-sm);
+}
+
+.poi-placeholder.size-sm i {
+  font-size: 20px;
+}
+
+.poi-placeholder.size-md {
+  width: 100%;
+  height: 120px;
+}
+
+.poi-placeholder.size-lg {
+  width: 100%;
+  height: 180px;
+  border-radius: 0;
+}
+
+.poi-placeholder.size-lg i {
+  font-size: 40px;
+}
+
+.poi-placeholder--photo {
+  background: var(--color-surface-muted, #e5e5e5);
+}
+
+.poi-placeholder--photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* -------- RWD:平板/桌機以上,內容置中並保留手機寬度感 -------- */
+@media (min-width: 600px) {
+  body {
+    background: var(--color-bg-soft);
+  }
+}

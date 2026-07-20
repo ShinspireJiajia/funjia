@@ -1,0 +1,186 @@
+/* ===================================================================
+   itin-detail.css
+   推薦行程詳情頁(pages/itin-detail.html)樣式:
+   共用 detail.css(hero / back-btn / title-row)與 fun-jia.css
+   (fav-btn / stop-list / comment-list / comment-form),此檔僅補充頁面專屬樣式。
+=================================================================== */
+
+.detail-title-row .fav-btn {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.itin-detail-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: 4px;
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
+.itin-detail-summary {
+  margin-top: var(--space-sm);
+  font-size: 13.5px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.itin-detail-section {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+}
+
+.itin-detail-section h2 {
+  font-size: 15px;
+  margin-bottom: var(--space-sm);
+}
+
+.itin-detail-section .stop-list {
+  margin: 0;
+}
+
+.empty-comment-hint {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
+.itin-detail-carbon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+}
+
+.itin-detail-carbon__info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--color-primary-dark);
+}
+
+.itin-detail-carbon__info i {
+  font-size: 20px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.itin-detail-carbon__add {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* -------- 行程規劃:圖文並茂的站點列表 -------- */
+.itin-detail-section .stop-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.stop-list__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.stop-list__item .poi-placeholder {
+  flex-shrink: 0;
+}
+
+.stop-list__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.stop-list__name {
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.stop-list__transport {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  color: var(--color-primary-dark);
+}
+
+.stop-list__transport i {
+  font-size: 10px;
+}
+
+/* -------- 旅人留言:照片上傳與預覽 -------- */
+.comment-item__photos,
+.comment-photo-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.comment-item__photos {
+  margin-top: 6px;
+}
+
+.comment-item__photos img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.comment-photo-preview:not(:empty) {
+  margin-top: var(--space-sm);
+  align-items: center;
+}
+
+.comment-photo-preview__item {
+  position: relative;
+  width: 56px;
+  height: 56px;
+}
+
+.comment-photo-preview__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.comment-photo-preview__remove {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-danger);
+  color: #fff;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment-photo-hint {
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+}
+
+.comment-photo-btn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  cursor: pointer;
+}

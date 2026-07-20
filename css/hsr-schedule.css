@@ -1,0 +1,132 @@
+/* ===================================================================
+   hsr-schedule.css
+   高鐵時刻查詢:北上/南下切換按鈕、班次列表列
+=================================================================== */
+
+.hsr-station-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  width: 100%;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-md);
+  text-align: left;
+}
+
+.hsr-station-card > i:first-child {
+  font-size: 20px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.hsr-station-card__body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hsr-station-card__body strong {
+  font-size: 14.5px;
+}
+
+.hsr-station-card__body span {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
+.hsr-station-card__chevron {
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.hsr-direction-toggle {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.hsr-direction-toggle[hidden] {
+  display: none;
+}
+
+.hsr-direction-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  box-shadow: var(--shadow-card);
+}
+
+.hsr-direction-btn.is-active {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.hsr-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.hsr-row__time {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  min-width: 56px;
+}
+
+.hsr-row__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.hsr-row__dest {
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hsr-row__dest i {
+  color: var(--color-primary);
+}
+
+.hsr-row__meta {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  margin-top: 3px;
+}
+
+.hsr-row__arrival {
+  flex-shrink: 0;
+  text-align: right;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.hsr-row__arrival span {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+}

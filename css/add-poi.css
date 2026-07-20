@@ -1,0 +1,220 @@
+/* ===================================================================
+   add-poi.css
+   新增資料頁(pages/add-poi.html)樣式,供景點/店家/住宿/活動共用
+=================================================================== */
+
+.add-poi-page {
+  padding: 0 var(--space-md) var(--space-xl);
+}
+
+.add-poi-intro {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background: var(--color-primary-bg);
+  color: var(--color-primary-dark);
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.add-poi-intro i {
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+.add-poi-form {
+  padding: var(--space-md);
+}
+
+.form-field {
+  margin-bottom: var(--space-md);
+}
+
+.form-field label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: 14px;
+  background: var(--color-bg);
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-field__row input {
+  flex: 1;
+}
+
+.photo-upload-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  border: 1.5px dashed var(--color-border);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.photo-preview {
+  margin-top: var(--space-sm);
+}
+
+.photo-preview__thumb {
+  position: relative;
+  width: 96px;
+  height: 96px;
+}
+
+.photo-preview__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.photo-preview__remove {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-danger);
+  color: #fff;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-card);
+}
+
+.a11y-tags-checklist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.a11y-tags-checklist__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-border);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.a11y-tags-checklist__item input {
+  width: auto;
+  accent-color: var(--color-primary);
+}
+
+.field-hint {
+  margin: -8px 0 var(--space-md);
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.field-hint.is-error {
+  color: var(--color-danger);
+}
+
+.add-poi-result {
+  display: none;
+  margin: var(--space-md) 0;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background: var(--color-primary-bg);
+  color: var(--color-primary-dark);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+.add-poi-result.is-visible {
+  display: block;
+}
+
+.add-poi-result__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 6px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.section-title-plain {
+  font-size: 16px;
+  font-weight: 700;
+  margin: var(--space-lg) 0 var(--space-sm);
+}
+
+.my-poi-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.my-poi-card__link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex: 1;
+  min-width: 0;
+}
+
+.my-poi-card__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.my-poi-card__body strong {
+  display: block;
+  font-size: 14px;
+}
+
+.my-poi-card__meta {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.my-poi-card__delete {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: var(--color-danger);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

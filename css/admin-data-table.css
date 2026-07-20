@@ -1,0 +1,160 @@
+/* ===================================================================
+   admin-data-table.css
+   後台共用元件:資料表格 / 狀態標籤 / 操作膠囊按鈕 / 分頁
+=================================================================== */
+
+.adm-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--adm-radius-md);
+  border: 1px solid var(--adm-border);
+}
+
+table.adm-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 640px;
+}
+
+.adm-table thead th {
+  background: var(--adm-primary-dark);
+  color: #fff;
+  text-align: left;
+  padding: 11px 14px;
+  font-weight: 600;
+  font-size: 12.5px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.adm-table tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--adm-border);
+  vertical-align: middle;
+}
+
+.adm-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.adm-table tbody tr:hover {
+  background: var(--adm-surface-alt);
+}
+
+.adm-table td.num,
+.adm-table th.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.adm-table td.strong {
+  font-weight: 700;
+}
+
+.adm-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.adm-status::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.adm-status.ok {
+  background: var(--adm-primary-bg);
+  color: var(--adm-primary-dark);
+}
+
+.adm-status.pending {
+  background: var(--adm-amber-bg);
+  color: var(--adm-amber);
+}
+
+.adm-status.off {
+  background: var(--adm-surface-alt);
+  color: var(--adm-text-muted);
+}
+
+.adm-status.danger {
+  background: var(--adm-red-bg);
+  color: var(--adm-red);
+}
+
+.adm-row-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: nowrap;
+}
+
+.adm-chip-btn {
+  font-size: 12px;
+  padding: 5px 11px;
+  border-radius: 7px;
+  border: 1px solid var(--adm-border);
+  background: var(--adm-surface);
+  color: var(--adm-text-muted);
+  white-space: nowrap;
+}
+
+.adm-chip-btn:hover {
+  filter: brightness(0.97);
+}
+
+.adm-chip-btn.view {
+  color: var(--adm-blue);
+  border-color: var(--adm-blue);
+  background: var(--adm-blue-bg);
+}
+
+.adm-chip-btn.note {
+  color: var(--adm-amber);
+  border-color: var(--adm-amber);
+  background: var(--adm-amber-bg);
+}
+
+.adm-chip-btn.danger {
+  color: var(--adm-red);
+  border-color: var(--adm-red);
+  background: var(--adm-red-bg);
+}
+
+.adm-chip-btn.ok {
+  color: var(--adm-primary);
+  border-color: var(--adm-primary);
+  background: var(--adm-primary-bg);
+}
+
+.adm-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 14px;
+  font-size: 12.5px;
+  color: var(--adm-text-muted);
+}
+
+.adm-pagination button {
+  border: 1px solid var(--adm-border);
+  background: var(--adm-surface);
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  color: var(--adm-text-muted);
+}
+
+.adm-pagination button.current {
+  background: var(--adm-primary);
+  border-color: var(--adm-primary);
+  color: #fff;
+}

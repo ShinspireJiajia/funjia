@@ -1,0 +1,64 @@
+/* ===================================================================
+   reward-card.css
+   優惠商城頁(pages/rewards-mall.html)卡片樣式:折價券/兌換好禮直向列表卡片
+=================================================================== */
+
+.reward-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  margin-bottom: var(--space-sm);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.reward-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.reward-card__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.reward-card__body h3 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.reward-card__desc {
+  margin-top: 4px;
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
+.reward-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-sm);
+}
+
+.reward-card__cost {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.reward-card__btn[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}

@@ -1,0 +1,46 @@
+/* ===================================================================
+   itinerary-plan.css
+   行程計畫詳情頁(pages/itinerary-plan.html)版面樣式
+   共用 group-travel.css / itinerary-planner.css 的卡片/表單/動線樣式,此檔僅補充本頁專屬樣式。
+=================================================================== */
+
+.plan-page {
+  padding: var(--space-md) var(--space-md) var(--space-xl);
+}
+
+.plan-detail__header {
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.plan-detail__header .plan-detail__title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan-detail__header .plan-detail__title-row strong {
+  font-size: 17px;
+}
+
+.plan-detail__header .plan-detail__code {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+}
+
+.plan-detail__header p {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-top: 6px;
+}
+
+.plan-detail__actions {
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.plan-detail__edit {
+  padding: var(--space-md);
+}

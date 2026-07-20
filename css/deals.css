@@ -1,0 +1,31 @@
+/* ===================================================================
+   deals.css
+   好康專區列表頁(pages/deals.html)版面樣式
+=================================================================== */
+
+.deals-page {
+  padding: var(--space-md) var(--space-md) var(--space-xl);
+}
+
+.deals-tabs {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.deals-tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 700;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  box-shadow: var(--shadow-card);
+}
+
+.deals-tab.is-active {
+  background: var(--color-primary);
+  color: #fff;
+}

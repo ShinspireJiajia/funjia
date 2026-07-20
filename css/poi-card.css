@@ -1,0 +1,152 @@
+/* ===================================================================
+   poi-card.css
+   共用 POI 卡片樣式(景點/店家/住宿/活動/公車/停車場皆共用)
+   - .poi-card--horizontal:首頁推薦專區橫向捲動卡片
+   - .poi-card--list:快選查詢結果直向列表卡片
+=================================================================== */
+
+.poi-card {
+  display: block;
+  position: relative;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.poi-card__title-row h3 {
+  font-size: 15px;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.poi-card__address,
+.poi-card__meta {
+  font-size: 14px;
+  color: #4a4a4a;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.poi-card__meta i {
+  color: var(--color-primary);
+}
+
+/* -------- 圖片區容器(承載圖片/佔位圖 + 熱門標籤) -------- */
+.poi-card__media {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.poi-card__hot-tag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  box-shadow: 0 1px 4px rgba(43, 43, 40, 0.25);
+}
+
+/* -------- 無障礙 / 分眾標籤(卡片內文字區,可同時顯示多個) -------- */
+.poi-card__a11y-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.poi-card__a11y-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #fff;
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* -------- 收藏按鈕(景點/店家/住宿卡片右上角) -------- */
+.poi-fav-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 14px;
+}
+
+.poi-fav-btn.is-active {
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--color-danger);
+}
+
+.poi-card--list .poi-fav-btn {
+  position: static;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: var(--color-bg-soft);
+  color: var(--color-text-muted);
+}
+
+.poi-card--list .poi-fav-btn.is-active {
+  background: var(--color-bg-soft);
+  color: var(--color-danger);
+}
+
+/* -------- 橫向捲動卡片(首頁推薦專區) -------- */
+.poi-card--horizontal {
+  flex: 0 0 190px;
+  scroll-snap-align: start;
+}
+
+.poi-card--horizontal .poi-card__body {
+  padding: var(--space-sm) var(--space-sm) var(--space-md);
+}
+
+/* -------- 直向列表卡片(快選查詢結果) -------- */
+.poi-card--list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.poi-card--list .poi-card__body {
+  flex: 1;
+  min-width: 0;
+}
+
+/* 橫向捲動容器 */
+.hscroll {
+  display: flex;
+  gap: var(--space-sm);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 4px;
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
+}
+
+.hscroll::-webkit-scrollbar {
+  display: none;
+}

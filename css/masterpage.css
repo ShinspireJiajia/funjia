@@ -1,0 +1,197 @@
+/* ===================================================================
+   masterpage.css
+   index.html 專用樣式:Header / iframe Body / 浮動助理按鈕 / 底部導覽列
+=================================================================== */
+
+html,
+body {
+  height: 100%;
+  overflow: hidden; /* 捲動交給 iframe 內頁處理 */
+}
+
+/* -------- Header -------- */
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  background: #3d5140;
+  color: #fff;
+}
+
+.app-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  font-size: 20px;
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.app-header__logo {
+  display: inline-flex;
+  color: #fff;
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.app-header__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.app-header__badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.app-header__lang-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.app-header__lang {
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+.app-header__lang i {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* 語言 / 字級 / 高對比彈出面板(內容由 .a11y-panel 共用元件負責,見 css/a11y.css) */
+.lang-popover {
+  position: absolute;
+  top: 44px;
+  right: 0;
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-elevated);
+  overflow: hidden;
+  min-width: 220px;
+  display: none;
+  z-index: 60;
+}
+
+.lang-popover.is-open {
+  display: block;
+}
+
+/* -------- Body / iframe -------- */
+.app-body {
+  position: fixed;
+  top: var(--header-height);
+  bottom: var(--bottom-nav-height);
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  background: var(--color-bg-soft);
+}
+
+.content-frame {
+  width: 100%;
+  max-width: var(--max-content-width);
+  height: 100%;
+  border: none;
+  background: var(--color-bg-soft);
+}
+
+/* -------- 懸浮快捷鍵:FUN嘉(快速進入揪團旅行) -------- */
+.fab-shortcut {
+  position: fixed;
+  bottom: calc(var(--bottom-nav-height) + var(--space-md));
+  right: max(var(--space-md), calc((100vw - var(--max-content-width)) / 2 + var(--space-md)));
+  z-index: 55;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-text-on-primary);
+  box-shadow: var(--shadow-elevated);
+  transition: transform 0.15s ease;
+}
+
+.fab-shortcut:active {
+  transform: scale(0.94);
+}
+
+.fab-shortcut i {
+  font-size: 18px;
+}
+
+.fab-shortcut span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* -------- Footer 底部導覽列 -------- */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--bottom-nav-height);
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.bottom-nav__inner {
+  width: 100%;
+  max-width: var(--max-content-width);
+  display: flex;
+}
+
+.bottom-nav__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.bottom-nav__item i {
+  font-size: 19px;
+}
+
+.bottom-nav__item.is-active {
+  color: var(--color-primary);
+}

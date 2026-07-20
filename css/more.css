@@ -1,0 +1,110 @@
+/* ===================================================================
+   more.css
+   更多功能(pages/more.html)版面樣式
+=================================================================== */
+
+.more-page {
+  padding: var(--space-md);
+}
+
+.more-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.more-a11y-desc {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  margin: 4px 2px var(--space-sm);
+}
+
+#a11yPanel {
+  margin-bottom: var(--space-lg);
+}
+
+.more-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.more-item:last-child {
+  border-bottom: none;
+}
+
+.more-item__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 17px;
+}
+
+.more-item__icon.tone-planner {
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary-dark));
+}
+
+.more-item__icon.tone-wallet {
+  background: linear-gradient(135deg, #2f8f82, #1a5a52);
+}
+
+.more-item__icon.tone-rewards {
+  background: linear-gradient(135deg, #e08a3c, #b85a1e);
+}
+
+.more-item__icon.tone-group {
+  background: linear-gradient(135deg, #3d7ea6, #1f4a63);
+}
+
+.more-item__icon.tone-funjia {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+}
+
+.more-item__icon.tone-news {
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary-dark));
+}
+
+.more-item__icon.tone-link {
+  background: linear-gradient(135deg, #6b8f47, #3f5c2b);
+}
+
+.more-item__icon.tone-add {
+  background: linear-gradient(135deg, #e0a83c, #b8791e);
+}
+
+.more-item__icon.tone-mission {
+  background: linear-gradient(135deg, #d97a9c, #a8496b);
+}
+
+.more-section-title {
+  margin-top: var(--space-lg);
+}
+
+.more-item__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.more-item__body strong {
+  font-size: 14.5px;
+}
+
+.more-item__body .desc {
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+}
+
+.more-item__arrow {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}

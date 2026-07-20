@@ -1,0 +1,895 @@
+/* ===================================================================
+   group-travel.css
+   揪團旅行頁(pages/group-travel.html)樣式
+=================================================================== */
+
+.group-page {
+  padding: 0 var(--space-md) var(--space-xl);
+}
+
+.group-tabs {
+  display: flex;
+  gap: 6px;
+  margin: var(--space-md) 0;
+}
+
+.group-tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px 2px;
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  box-shadow: var(--shadow-card);
+}
+
+.group-tab.is-active {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.group-panel {
+  display: none;
+  padding: var(--space-md);
+}
+
+.group-panel.is-active {
+  display: block;
+}
+
+.form-field {
+  margin-bottom: var(--space-md);
+}
+
+.form-field label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: 14px;
+  background: var(--color-bg);
+}
+
+.group-result {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background: var(--color-primary-bg);
+  color: var(--color-primary-dark);
+  font-size: 13.5px;
+  line-height: 1.7;
+  display: none;
+}
+
+.group-result.is-visible {
+  display: block;
+}
+
+.group-result .code {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.group-error {
+  margin-top: var(--space-sm);
+  color: var(--color-danger);
+  font-size: 12.5px;
+  display: none;
+}
+
+.group-error.is-visible {
+  display: block;
+}
+
+.section-title-plain {
+  font-size: 16px;
+  font-weight: 700;
+  margin: var(--space-lg) 0 var(--space-sm);
+}
+
+.my-group-card {
+  display: block;
+  padding: var(--space-md);
+  margin-bottom: var(--space-sm);
+  cursor: pointer;
+}
+
+.my-group-card__title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-group-card__title-row strong {
+  font-size: 14.5px;
+}
+
+.my-group-card__code {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+}
+
+.my-group-card p {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  margin-top: 6px;
+}
+
+/* -------- 行程規劃方式切換(平台推薦 / 自行建立) -------- */
+.mode-toggle {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.mode-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-border);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+}
+
+.mode-btn.is-active {
+  border-color: var(--color-primary);
+  background: var(--color-primary-bg);
+  color: var(--color-primary-dark);
+}
+
+.btn-sm {
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+.field-hint {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.field-hint.is-error {
+  color: var(--color-danger);
+}
+
+/* -------- 推薦行程站點預覽 -------- */
+.stops-preview {
+  margin-top: var(--space-sm);
+}
+
+.stops-preview__title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.stops-preview__item {
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-soft);
+  margin-bottom: 6px;
+  font-size: 12.5px;
+}
+
+.stops-preview__item strong {
+  display: block;
+}
+
+.stops-preview__item span {
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+/* -------- 自行建立行程:建議地點 -------- */
+.spot-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: var(--space-sm);
+}
+
+.spot-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-bg);
+  font-size: 12.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.spot-chip.is-added {
+  border-color: var(--color-primary);
+  background: var(--color-primary-bg);
+  color: var(--color-primary-dark);
+}
+
+.spot-chip__category {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.custom-stop-add {
+  display: flex;
+  gap: 8px;
+  margin-top: var(--space-sm);
+}
+
+.custom-stop-add input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: 14px;
+  background: var(--color-bg);
+}
+
+.custom-stops {
+  margin-top: var(--space-sm);
+}
+
+.custom-stop-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-soft);
+  margin-bottom: 6px;
+}
+
+.custom-stop-item__order {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.custom-stop-item__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.custom-stop-item__body strong {
+  display: block;
+  font-size: 13px;
+}
+
+.custom-stop-item__body span {
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+}
+
+.custom-stop-item__handle {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: grab;
+  touch-action: none;
+}
+
+.custom-stop-item.is-dragging {
+  opacity: 0.6;
+}
+
+.custom-stop-item__remove {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* -------- 邀請好友核取方塊 -------- */
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.checkbox-field input {
+  width: 16px;
+  height: 16px;
+}
+
+/* -------- 建立結果:邀請 / 分享區塊 -------- */
+.invite-block {
+  margin-top: var(--space-sm);
+}
+
+.invite-block__label {
+  font-size: 12.5px;
+}
+
+.invite-block__deferred {
+  font-size: 12.5px;
+  margin-bottom: var(--space-sm);
+}
+
+.share-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+/* -------- 我的揪團:自訂行程站點標籤 -------- */
+.my-group-card__stops {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.my-group-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.my-group-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.section-title-plain--tight {
+  margin-top: 0;
+}
+
+/* -------- 我的收藏:收藏的行程 / 收藏的景點 子頁籤 -------- */
+.my-fav-tabs {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.my-fav-tab {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-border);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+}
+
+.my-fav-tab.is-active {
+  border-color: var(--color-primary);
+  background: var(--color-primary-bg);
+  color: var(--color-primary-dark);
+}
+
+.my-fav-view {
+  display: none;
+}
+
+.my-fav-view.is-active {
+  display: block;
+}
+
+/* -------- Fun 嘉推薦:推薦行程排序工具列 -------- */
+.fun-jia-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.fun-jia-sort {
+  flex-shrink: 0;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: 12.5px;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* -------- 加入揪團:預設收合,點按鈕才展開 -------- */
+.join-panel {
+  display: none;
+  margin-top: var(--space-sm);
+}
+
+.join-panel.is-open {
+  display: block;
+}
+
+/* -------- 行程計畫詳情頁:編輯行程 / 刪除(pages/itinerary-plan.html 共用) -------- */
+.edit-panel__actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-danger {
+  color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+
+/* -------- 自行建立行程:最佳動線計算 -------- */
+.route-options {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px dashed var(--color-border);
+}
+
+.form-field-inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.form-field-inline label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.form-field-inline input,
+.form-field-inline select {
+  flex: 1;
+  max-width: 60%;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: 13px;
+  background: var(--color-bg);
+}
+
+/* -------- 動線時間軸(建立預覽 / 我的旅遊計畫卡片皆共用) -------- */
+.plan-timeline {
+  margin-top: var(--space-sm);
+}
+
+.plan-day {
+  margin-bottom: var(--space-sm);
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-soft);
+}
+
+.plan-day__title {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 8px;
+}
+
+.plan-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 6px 0;
+  font-size: 12.5px;
+}
+
+.plan-item--travel {
+  color: var(--color-text-muted);
+  padding-left: 4px;
+}
+
+.plan-item--travel i {
+  width: 16px;
+  text-align: center;
+}
+
+.plan-item__time {
+  flex-shrink: 0;
+  width: 84px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.plan-item__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.plan-item__body strong {
+  display: block;
+}
+
+.plan-item__body span {
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+}
+
+.plan-item--lodging .plan-item__body strong {
+  color: var(--color-accent-dark);
+}
+
+.plan-item--parking .plan-item__body strong {
+  color: var(--color-text-muted);
+}
+
+.plan-summary {
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-bg);
+  color: var(--color-primary-dark);
+  font-size: 12.5px;
+}
+
+.plan-summary__unplaced {
+  margin-top: 6px;
+  color: var(--color-warning);
+}
+
+/* ===================================================================
+   建立揪團:4 步驟精靈(基本設定 / 挑選景點 / 規劃動線 / 建立揪團)
+=================================================================== */
+
+/* -------- 頂部進度條 -------- */
+.wizard-progress {
+  padding: var(--space-md) var(--space-md) 0;
+}
+
+.wizard-progress__track {
+  height: 4px;
+  border-radius: 999px;
+  background: var(--color-border);
+  overflow: hidden;
+}
+
+.wizard-progress__fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: var(--color-primary);
+  transition: width 0.25s ease;
+}
+
+.wizard-progress__steps {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.wizard-progress__step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.wizard-progress__dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--color-bg-soft);
+  color: var(--color-text-muted);
+  border: 1.5px solid var(--color-border);
+}
+
+.wizard-progress__step em {
+  font-style: normal;
+  font-size: 10.5px;
+  color: var(--color-text-muted);
+}
+
+.wizard-progress__step.is-active .wizard-progress__dot {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.wizard-progress__step.is-active em {
+  color: var(--color-primary-dark);
+  font-weight: 700;
+}
+
+.wizard-progress__step.is-done .wizard-progress__dot {
+  border-color: var(--color-primary);
+  background: var(--color-primary-bg);
+  color: var(--color-primary);
+}
+
+/* -------- 步驟容器 -------- */
+.wizard {
+  padding: var(--space-md);
+}
+
+.wizard-step {
+  display: none;
+}
+
+.wizard-step.is-active {
+  display: block;
+  animation: wizard-step-in 0.2s ease;
+}
+
+@keyframes wizard-step-in {
+  from {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.wizard-nav {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.wizard-nav .wizard-back-btn {
+  flex-shrink: 0;
+}
+
+.manual-add-toggle {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  margin-top: var(--space-sm);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* -------- Step 2:搜尋框 / 推薦標籤 / 熱門景點卡片 -------- */
+.spot-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: var(--space-sm);
+}
+
+.spot-search-box i {
+  position: absolute;
+  left: 12px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.spot-search-box input {
+  width: 100%;
+  padding: 11px 12px 11px 34px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  font-size: 14px;
+  background: var(--color-bg);
+}
+
+.spot-tag-row {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  margin-top: var(--space-sm);
+  padding-bottom: 2px;
+}
+
+.spot-tag {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-bg);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.spot-tag.is-active {
+  border-color: var(--color-primary);
+  background: var(--color-primary-bg);
+  color: var(--color-primary-dark);
+}
+
+.spot-cards {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin-top: var(--space-sm);
+  padding-bottom: 4px;
+}
+
+.spot-card {
+  flex-shrink: 0;
+  width: 116px;
+  padding: 8px;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-soft);
+  border: 1.5px solid transparent;
+  position: relative;
+}
+
+.spot-card.is-added {
+  border-color: var(--color-primary);
+  background: var(--color-primary-bg);
+}
+
+.spot-card .poi-placeholder {
+  width: 100%;
+  height: 72px;
+}
+
+.spot-card__body {
+  margin-top: 6px;
+}
+
+.spot-card__body strong {
+  display: block;
+  font-size: 12.5px;
+  line-height: 1.3;
+}
+
+.spot-card__body span {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.spot-card__add {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  color: var(--color-primary);
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spot-card.is-added .spot-card__add {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* -------- Step 2:常駐「已選景點」狀態列 -------- */
+.selected-stops-bar {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: var(--space-md) calc(var(--space-md) * -1) calc(var(--space-md) * -1);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -4px 12px rgba(43, 43, 40, 0.08);
+}
+
+.selected-stops-bar__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  padding: 6px 0;
+}
+
+.selected-stops-bar__toggle i {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  transition: transform 0.2s ease;
+}
+
+.selected-stops-bar.is-empty .selected-stops-bar__toggle {
+  color: var(--color-text-muted);
+}
+
+.selected-stops-bar:not(.is-expanded) .selected-stops-bar__preview {
+  display: none;
+}
+
+.selected-stops-bar.is-expanded .selected-stops-bar__toggle i {
+  transform: rotate(180deg);
+}
+
+.selected-stops-bar__preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 4px 0 var(--space-sm);
+  max-height: 140px;
+  overflow-y: auto;
+}
+
+.selected-stop-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 6px 5px 10px;
+  border-radius: 999px;
+  background: var(--color-bg-soft);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.selected-stop-chip__remove {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-border);
+  color: var(--color-text);
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected-stops-bar__cta {
+  width: 100%;
+}
+
+.selected-stops-bar__cta:disabled {
+  opacity: 0.5;
+}
+
+/* -------- Step 3:計算動線 hint -------- */
+#routeComputeHint:empty {
+  display: none;
+}

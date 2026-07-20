@@ -1,0 +1,65 @@
+/* ===================================================================
+   admin-timeline-chart.css
+   後台共用元件:活動檔期時間軸(依起訖日期畫出橫向色條)
+=================================================================== */
+
+.adm-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.adm-tl-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .adm-tl-row {
+    grid-template-columns: 96px 1fr;
+  }
+}
+
+.adm-tl-label {
+  font-size: 12.5px;
+}
+
+.adm-tl-track {
+  position: relative;
+  height: 20px;
+  background: var(--adm-surface-alt);
+  border-radius: 5px;
+}
+
+.adm-tl-bar {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  background: var(--adm-primary);
+  border-radius: 4px;
+}
+
+.adm-tl-bar.hot {
+  background: var(--adm-amber);
+}
+
+.adm-tl-axis {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  font-size: 10.5px;
+  color: var(--adm-text-faint);
+  margin-top: 4px;
+}
+
+@media (max-width: 700px) {
+  .adm-tl-axis {
+    grid-template-columns: 96px 1fr;
+  }
+}
+
+.adm-tl-axis > div {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,179 @@
+/* ===================================================================
+   fun-jia.css
+   Fun 嘉推薦行程列表頁(pages/fun-jia.html)樣式:卡片 + 收藏。
+   stop-list / comment-list / comment-form 為與 itin-detail.html 共用樣式。
+=================================================================== */
+
+.fun-jia-page {
+  padding: var(--space-md) var(--space-md) var(--space-xl);
+}
+
+.itin-card {
+  margin-bottom: var(--space-md);
+  overflow: visible;
+}
+
+.itin-card__top {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+}
+
+.itin-card__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.itin-card__body h3 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.itin-card__body .summary {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.itin-card__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
+.fav-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.fav-btn i {
+  color: var(--color-danger);
+}
+
+.fav-btn.is-active {
+  color: var(--color-danger);
+}
+
+.itin-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 12.5px;
+  color: var(--color-primary);
+  font-weight: 600;
+  border-top: 1px solid var(--color-border);
+}
+
+.itin-card__link i {
+  font-size: 11px;
+}
+
+/* -------- 揪團旅行頁「Fun 嘉推薦」卡片:查看行程 + 直接建立揪團 -------- */
+.itin-card__footer {
+  display: flex;
+  border-top: 1px solid var(--color-border);
+}
+
+.itin-card__footer .itin-card__link {
+  flex: 1;
+  border-top: none;
+}
+
+.itin-card__create-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-primary);
+  border-left: 1px solid var(--color-border);
+}
+
+.itin-card__create-btn i {
+  font-size: 11px;
+}
+
+.stop-list {
+  margin: var(--space-sm) 0;
+  padding-left: var(--space-md);
+  list-style: decimal;
+}
+
+.stop-list li {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.stop-list li .note {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: 11.5px;
+}
+
+.comment-list {
+  margin-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-sm);
+}
+
+.comment-item {
+  font-size: 12.5px;
+  margin-bottom: 8px;
+}
+
+.comment-item .name {
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.comment-item .date {
+  color: var(--color-text-muted);
+  font-size: 11px;
+  margin-left: 6px;
+}
+
+.comment-form {
+  display: flex;
+  gap: 6px;
+  margin-top: var(--space-sm);
+}
+
+.comment-form input {
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: 12.5px;
+}
+
+.comment-form input.nickname {
+  width: 76px;
+  flex-shrink: 0;
+}
+
+.comment-form input.text {
+  flex: 1;
+}
+
+.comment-form button {
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 700;
+}

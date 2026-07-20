@@ -1,0 +1,104 @@
+/* ===================================================================
+   admin-theme.css
+   後台管理系統共用色彩變數與基礎 reset。
+   設計主題:穩重山脈綠 — 呼應前台品牌色但獨立一套變數,避免與消費端頁面互相影響。
+   此檔案由 admin.html 與所有 pages/admin-*.html 共同引入。
+=================================================================== */
+
+:root {
+  --adm-bg: #f2f5f3;
+  --adm-surface: #ffffff;
+  --adm-surface-alt: #edf2ef;
+  --adm-border: #dde5e0;
+  --adm-text: #202b26;
+  --adm-text-muted: #66756e;
+  --adm-text-faint: #94a29b;
+
+  --adm-primary: #3c6255;
+  --adm-primary-dark: #294a3f;
+  --adm-primary-light: #6f9384;
+  --adm-primary-bg: #e6efe9;
+
+  --adm-amber: #b07a28;
+  --adm-amber-bg: #f7ecd8;
+  --adm-red: #b5473f;
+  --adm-red-bg: #f8e5e2;
+  --adm-blue: #3d6f8f;
+  --adm-blue-bg: #e5eef3;
+
+  --adm-shadow-sm: 0 1px 2px rgba(32, 43, 38, 0.06);
+  --adm-shadow-md: 0 6px 20px rgba(32, 43, 38, 0.09);
+
+  --adm-radius-sm: 7px;
+  --adm-radius-md: 10px;
+  --adm-radius-lg: 12px;
+
+  --adm-font: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--adm-bg);
+  color: var(--adm-text);
+  font-family: var(--adm-font);
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+  }
+}

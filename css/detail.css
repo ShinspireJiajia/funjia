@@ -1,0 +1,223 @@
+/* ===================================================================
+   detail.css
+   共用詳情頁(pages/detail.html)樣式
+=================================================================== */
+
+.detail-hero {
+  position: relative;
+}
+
+.detail-back-btn {
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-body {
+  padding: 0 var(--space-md) var(--space-xl);
+}
+
+.detail-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.detail-title-row h1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.detail-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--color-accent-dark);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.detail-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: var(--space-sm) 0;
+}
+
+.detail-a11y-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-sm);
+}
+
+.detail-a11y-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.detail-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.detail-info-list .info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  font-size: 13.5px;
+}
+
+.detail-info-list .info-row i {
+  width: 18px;
+  color: var(--color-primary);
+  margin-top: 2px;
+}
+
+.detail-actions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.detail-actions .btn {
+  flex: 1;
+}
+
+.detail-desc {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+}
+
+.detail-desc h2 {
+  font-size: 15px;
+  margin-bottom: var(--space-sm);
+}
+
+.detail-desc p {
+  font-size: 13.5px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.detail-routes {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+}
+
+.detail-routes h2 {
+  font-size: 15px;
+  margin-bottom: var(--space-sm);
+}
+
+.detail-route-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 13.5px;
+}
+
+.detail-route-item:last-child {
+  border-bottom: none;
+}
+
+.detail-route-item .eta {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.detail-nearby {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+}
+
+.detail-nearby h2 {
+  font-size: 15px;
+  margin-bottom: var(--space-sm);
+}
+
+.detail-nearby-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.detail-nearby-item:last-child {
+  border-bottom: none;
+}
+
+.detail-nearby-item > i:first-child {
+  width: 20px;
+  text-align: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.detail-nearby-item > i:last-child {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.detail-nearby-item__body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.detail-nearby-item__body strong {
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.detail-nearby-item__body span {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.low-carbon-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  background: var(--color-primary-bg);
+  color: var(--color-primary-dark);
+  border-radius: var(--radius-md);
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+.low-carbon-banner i {
+  font-size: 20px;
+  flex-shrink: 0;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fun 嘉｜觀光行銷後台</title>
+  <meta name="description" content="Fun 嘉觀光行銷後台管理系統(示範原型):景點/活動內容維運、行銷點數設定、推播與數據儀表板。" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/admin-theme.css" />
+  <link rel="stylesheet" href="css/admin-masterpage.css" />
+</head>
+<body>
+  <div class="adm-shell">
+    <!-- ============ 側欄:品牌 + 分組導覽(masterpage 架構) ============ -->
+    <aside class="adm-sidebar">
+      <div class="adm-brand">
+        <div class="adm-brand__mark"><i class="fa-solid fa-mountain-sun"></i></div>
+        <div class="adm-brand__text"><strong>Fun 嘉</strong><span>觀光行銷後台</span></div>
+      </div>
+      <nav class="adm-nav" id="admNav"></nav>
+    </aside>
+
+    <div class="adm-main">
+      <!-- ============ Header 區塊:麵包屑 + 管理者資訊 ============ -->
+      <header class="adm-topbar">
+        <div class="adm-crumb" id="admCrumb">內容管理 / <b>POI 資料庫清單</b></div>
+        <div class="adm-user">
+          <div class="adm-avatar" id="admAvatar">JI</div>
+          <div class="adm-user-meta"><strong id="admUserName">jia</strong><span id="admUserRole">系統管理員</span></div>
+          <button type="button" class="adm-logout" id="admLogoutBtn">
+            <i class="fa-solid fa-right-from-bracket"></i> 登出
+          </button>
+        </div>
+      </header>
+
+      <!-- ============ Body 區塊:以 iframe 嵌入後台功能頁面(masterpage 架構) ============ -->
+      <main class="adm-body">
+        <iframe id="admContentFrame" class="adm-content-frame" title="後台功能內容"></iframe>
+      </main>
+
+      <!-- ============ Footer 區塊 ============ -->
+      <footer class="adm-footer">
+        <span>Fun 嘉觀光行銷後台 · 示範原型(DEMO)</span>
+        <span>v0.1</span>
+      </footer>
+    </div>
+  </div>
+
+  <script src="js/admin/admin-nav-config.js"></script>
+  <script src="js/admin/services/admin-account-service.js"></script>
+  <script src="js/admin/admin-shell.js"></script>
+</body>
+</html>

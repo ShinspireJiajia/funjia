@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="pageTitle">新增資料｜Fun 嘉</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style-base.css" />
+  <link rel="stylesheet" href="../css/a11y.css" />
+  <link rel="stylesheet" href="../css/page-header.css" />
+  <link rel="stylesheet" href="../css/poi-card.css" />
+  <link rel="stylesheet" href="../css/add-poi.css" />
+  <script src="../js/core/i18n-core.js"></script>
+  <script src="../js/core/a11y-init.js"></script>
+</head>
+<body>
+  <header class="page-header">
+    <button class="page-header__back" onclick="history.back()" aria-label="返回"><i class="fa-solid fa-arrow-left"></i></button>
+    <h1 id="pageHeading">新增資料</h1>
+  </header>
+
+  <div class="add-poi-page">
+    <p class="add-poi-intro" id="addPoiIntro">
+      <i class="fa-solid fa-map-pin"></i>
+      找不到喜歡的私房景點嗎?歡迎自行建立,和大家分享嘉義的美好角落!
+    </p>
+
+    <form id="addPoiForm" class="card add-poi-form">
+      <div class="form-field">
+        <label for="poiName" id="poiNameLabel">名稱 *</label>
+        <input type="text" id="poiName" placeholder="例如:獨立山步道" required />
+      </div>
+
+      <div class="form-field">
+        <label for="poiCategory">分類 *</label>
+        <select id="poiCategory" required>
+          <option value="" disabled selected>請選擇分類</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="poiAddress">地址</label>
+        <input type="text" id="poiAddress" placeholder="輸入地址,系統會自動定位以顯示於地圖" />
+      </div>
+
+      <div class="form-field" id="dateRangeField" hidden>
+        <label>活動日期</label>
+        <div class="form-field__row">
+          <input type="date" id="poiStartDate" />
+          <span>～</span>
+          <input type="date" id="poiEndDate" />
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="poiHours" id="poiHoursLabel">營業/開放時間</label>
+        <input type="text" id="poiHours" placeholder="例如:09:00–17:00" />
+      </div>
+
+      <div class="form-field" id="priceRangeField" hidden>
+        <label for="poiPriceRange">價格資訊</label>
+        <input type="text" id="poiPriceRange" placeholder="例如:NT$2,000起" />
+      </div>
+
+      <div class="form-field">
+        <label for="poiPhone">聯絡電話</label>
+        <input type="text" id="poiPhone" placeholder="例如:05-1234567" />
+      </div>
+
+      <div class="form-field">
+        <label for="poiTags">標籤(以逗號分隔)</label>
+        <input type="text" id="poiTags" placeholder="例如:秘境, 免費, 賞景" />
+      </div>
+
+      <div class="form-field">
+        <label data-i18n="a11yTagsHeading">無障礙 / 分眾標籤</label>
+        <div class="a11y-tags-checklist" id="poiA11yTags"></div>
+        <p class="field-hint" data-i18n="a11yTagsHint">勾選符合的項目,協助更多使用者判斷是否適合前往</p>
+      </div>
+
+      <div class="form-field">
+        <label for="poiDescription" id="poiDescriptionLabel">介紹 *</label>
+        <textarea id="poiDescription" rows="4" placeholder="介紹特色、怎麼去、注意事項..." required></textarea>
+      </div>
+
+      <div class="form-field">
+        <label class="photo-upload-label">
+          <i class="fa-solid fa-camera"></i> 上傳照片(選填)
+          <input type="file" id="poiPhoto" accept="image/*" hidden />
+        </label>
+        <div class="photo-preview" id="photoPreview"></div>
+      </div>
+
+      <p class="field-hint" id="geocodeHint"></p>
+
+      <button type="submit" class="btn btn-primary" id="submitPoiBtn" style="width: 100%">
+        <i class="fa-solid fa-plus"></i> <span id="submitBtnLabel">送出</span>
+      </button>
+    </form>
+
+    <div class="add-poi-result" id="addResult"></div>
+
+    <div class="section-title-plain" id="myListTitle">我新增的資料</div>
+    <div id="myPoiList"></div>
+  </div>
+
+  <script src="../js/services/data-service.js"></script>
+  <script src="../js/services/user-poi-service.js"></script>
+  <script src="../js/services/poi-service.js"></script>
+  <script src="../js/services/geocode-service.js"></script>
+  <script src="../js/components/poi-placeholder.js"></script>
+  <script src="../js/core/a11y-tags.js"></script>
+  <script src="../js/pages/add-poi-page.js"></script>
+</body>
+</html>

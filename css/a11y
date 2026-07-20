@@ -1,0 +1,194 @@
+/* ===================================================================
+   a11y.css
+   全站無障礙操作樣式:
+   1) 字級調整 — 既有元件多以固定 px 設定字級,若改走 rem 全站改版成本過高,
+      故採 zoom 對 <html> 做整體縮放,無需更動既有元件樣式即可套用。
+   2) 高對比模式 — 覆寫 style-base.css 的設計 token(CSS 變數),
+      讓所有沿用變數的元件自動套用高對比配色。
+   3) 共用的語言 / 字級 / 高對比設定面板(.a11y-panel)樣式,
+      同時供 masterpage 頁首彈出選單與「更多功能」頁的設定區塊使用。
+=================================================================== */
+
+html[data-font-scale="1"] {
+  zoom: 1.15;
+}
+
+html[data-font-scale="2"] {
+  zoom: 1.3;
+}
+
+html[data-font-scale="3"] {
+  zoom: 1.45;
+}
+
+html[data-contrast="high"] {
+  --color-primary: #eab308;
+  --color-primary-dark: #eab308;
+  --color-primary-light: #fde047;
+  --color-primary-bg: #332b00;
+  --color-accent: #ffd60a;
+  --color-accent-dark: #ffd60a;
+  --color-accent-bg: #332900;
+  --color-bg: #000000;
+  --color-bg-soft: #000000;
+  --color-surface: #0d0d0d;
+  --color-border: #ffffff;
+  --color-text: #ffffff;
+  --color-text-muted: #e5e5e5;
+  --color-text-on-primary: #000000;
+  --color-danger: #ff6b6b;
+  --color-success: #7cfc00;
+  --color-warning: #ffd60a;
+  --shadow-card: 0 0 0 1px #ffffff;
+  --shadow-elevated: 0 0 0 1px #ffffff;
+}
+
+html[data-contrast="high"] body {
+  background: #000;
+  color: #fff;
+}
+
+html[data-contrast="high"] .app-header,
+html[data-contrast="high"] .bottom-nav,
+html[data-contrast="high"] .page-header {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+html[data-contrast="high"] .app-header {
+  border-bottom: 1px solid #fff;
+}
+
+html[data-contrast="high"] .bottom-nav {
+  border-top: 1px solid #fff;
+}
+
+html[data-contrast="high"] .app-header__title,
+html[data-contrast="high"] .app-header__logo,
+html[data-contrast="high"] .app-header__lang,
+html[data-contrast="high"] .app-header__lang i {
+  color: #fff !important;
+}
+
+/* -------- 鍵盤/切換操作焦點樣式,一般模式與高對比模式皆提供明顯焦點框 -------- */
+:focus-visible {
+  outline: 2px solid var(--color-primary-dark);
+  outline-offset: 2px;
+}
+
+html[data-contrast="high"] :focus-visible {
+  outline: 3px solid #ffd60a;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* -------- 共用設定面板(語言 / 字級 / 高對比) -------- */
+.a11y-panel__section {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.a11y-panel__section:last-child {
+  border-bottom: none;
+}
+
+.a11y-panel__section-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+.a11y-panel__lang-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.a11y-panel__lang-list button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 4px;
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.a11y-panel__lang-list button.is-active {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.a11y-panel__font-list {
+  display: flex;
+  gap: 6px;
+}
+
+.a11y-panel__font-list button {
+  flex: 1;
+  padding: 8px 4px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-soft);
+  color: var(--color-text);
+  font-size: 12.5px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.a11y-panel__font-list button.is-active {
+  background: var(--color-primary);
+  color: var(--color-text-on-primary);
+}
+
+.a11y-panel__section--contrast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.a11y-panel__contrast-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.a11y-panel__switch-track {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--color-border);
+  transition: background 0.15s ease;
+  flex-shrink: 0;
+}
+
+.a11y-panel__switch-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease;
+}
+
+.a11y-panel__contrast-toggle.is-on .a11y-panel__switch-track {
+  background: var(--color-primary);
+}
+
+.a11y-panel__contrast-toggle.is-on .a11y-panel__switch-thumb {
+  transform: translateX(18px);
+}

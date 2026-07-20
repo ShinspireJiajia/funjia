@@ -1,0 +1,84 @@
+[
+  {
+    "id": "reward-001",
+    "kind": "coupon",
+    "title": "噴水雞肉飯 折抵 50 元",
+    "desc": "憑兌換碼至店內用餐,現場折抵消費 50 元",
+    "cost": 80,
+    "icon": "fa-bowl-rice",
+    "tone": "green",
+    "type": "shops",
+    "refId": "shop-001"
+  },
+  {
+    "id": "reward-002",
+    "kind": "coupon",
+    "title": "阿里山鄒築園茶莊 9 折優惠",
+    "desc": "憑兌換碼消費高山茶葉、體驗行程享 9 折",
+    "cost": 120,
+    "icon": "fa-mug-hot",
+    "tone": "brown",
+    "type": "shops",
+    "refId": "shop-002"
+  },
+  {
+    "id": "reward-003",
+    "kind": "coupon",
+    "title": "檜意森活村 文創商品折抵 100 元",
+    "desc": "憑兌換碼至指定文創商店消費滿千折抵 100 元",
+    "cost": 150,
+    "icon": "fa-store",
+    "tone": "orange",
+    "type": "attractions",
+    "refId": "attr-002"
+  },
+  {
+    "id": "reward-004",
+    "kind": "coupon",
+    "title": "東石漁港蚵仔專賣 加菜券",
+    "desc": "憑兌換碼至店內用餐,免費兌換蚵仔煎一份",
+    "cost": 100,
+    "icon": "fa-shrimp",
+    "tone": "blue",
+    "type": "shops",
+    "refId": "shop-005"
+  },
+  {
+    "id": "reward-005",
+    "kind": "coupon",
+    "title": "奮起湖百年老街便當本舖 便當兌換券",
+    "desc": "憑兌換碼免費兌換經典鐵路便當一個",
+    "cost": 180,
+    "icon": "fa-box",
+    "tone": "teal",
+    "type": "shops",
+    "refId": "shop-004"
+  },
+  {
+    "id": "reward-006",
+    "kind": "gift",
+    "title": "Fun 嘉環保隨行杯",
+    "desc": "以嘉義林鐵意象設計的環保隨行杯,減少一次性容器使用",
+    "cost": 200,
+    "icon": "fa-mug-saucer",
+    "tone": "green"
+  },
+  {
+    "id": "reward-007",
+    "kind": "gift",
+    "title": "阿里山森林小火車紀念徽章",
+    "desc": "限量版鐵道紀念徽章,兌換完成後將以驛站櫃檯領取",
+    "cost": 260,
+    "icon": "fa-award",
+    "tone": "pink"
+  },
+  {
+    "id": "reward-008",
+    "kind": "gift",
+    "title": "在地達人免費導覽解說(2 小時)",
+    "desc": "指定景點在地導覽解說服務,需提前 3 天預約場次",
+    "cost": 400,
+    "icon": "fa-person-walking-luggage",
+    "tone": "gray"
+  }
+]

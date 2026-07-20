@@ -1,0 +1,82 @@
+{
+  "_source": "示範資料,格式參考中央氣象署開放資料平台(F-C0032-001 今明36小時天氣預報),正式版請改為即時 fetch",
+  "updateTime": "2026-07-16T14:00:00+08:00",
+  "locations": [
+    {
+      "id": "chiayi-city",
+      "locationName": "嘉義市",
+      "temperature": 34,
+      "feelsLike": 37,
+      "minT": 27,
+      "maxT": 35,
+      "weatherDesc": "多雲時晴",
+      "weatherIcon": "sun-cloud",
+      "pop": 20,
+      "humidity": 68,
+      "uvIndex": 8,
+      "uvLevel": "高",
+      "forecast3d": [
+        { "label": "明天", "weekday": "五", "weatherIcon": "sun-cloud", "maxT": 35, "minT": 27 },
+        { "label": "週六", "weekday": "六", "weatherIcon": "sunny", "maxT": 36, "minT": 28 },
+        { "label": "週日", "weekday": "日", "weatherIcon": "rain", "maxT": 31, "minT": 26 }
+      ]
+    },
+    {
+      "id": "alishan",
+      "locationName": "阿里山",
+      "temperature": 21,
+      "feelsLike": 20,
+      "minT": 17,
+      "maxT": 23,
+      "weatherDesc": "午後短暫雷雨",
+      "weatherIcon": "thunderstorm",
+      "pop": 70,
+      "humidity": 85,
+      "uvIndex": 5,
+      "uvLevel": "中",
+      "forecast3d": [
+        { "label": "明天", "weekday": "五", "weatherIcon": "thunderstorm", "maxT": 22, "minT": 16 },
+        { "label": "週六", "weekday": "六", "weatherIcon": "rain", "maxT": 21, "minT": 16 },
+        { "label": "週日", "weekday": "日", "weatherIcon": "cloudy", "maxT": 23, "minT": 17 }
+      ]
+    },
+    {
+      "id": "dongshi",
+      "locationName": "東石",
+      "temperature": 32,
+      "feelsLike": 35,
+      "minT": 28,
+      "maxT": 33,
+      "weatherDesc": "晴時多雲",
+      "weatherIcon": "sunny",
+      "pop": 10,
+      "humidity": 72,
+      "uvIndex": 9,
+      "uvLevel": "危險",
+      "forecast3d": [
+        { "label": "明天", "weekday": "五", "weatherIcon": "sunny", "maxT": 33, "minT": 28 },
+        { "label": "週六", "weekday": "六", "weatherIcon": "sun-cloud", "maxT": 34, "minT": 29 },
+        { "label": "週日", "weekday": "日", "weatherIcon": "cloudy", "maxT": 30, "minT": 27 }
+      ]
+    },
+    {
+      "id": "budai",
+      "locationName": "布袋",
+      "temperature": 31,
+      "feelsLike": 34,
+      "minT": 27,
+      "maxT": 32,
+      "weatherDesc": "多雲",
+      "weatherIcon": "cloudy",
+      "pop": 15,
+      "humidity": 74,
+      "uvIndex": 7,
+      "uvLevel": "高",
+      "forecast3d": [
+        { "label": "明天", "weekday": "五", "weatherIcon": "cloudy", "maxT": 32, "minT": 27 },
+        { "label": "週六", "weekday": "六", "weatherIcon": "sun-cloud", "maxT": 33, "minT": 28 },
+        { "label": "週日", "weekday": "日", "weatherIcon": "rain", "maxT": 29, "minT": 26 }
+      ]
+    }
+  ]
+}

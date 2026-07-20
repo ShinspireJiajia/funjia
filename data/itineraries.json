@@ -1,0 +1,73 @@
+[
+  {
+    "id": "itin-001",
+    "title": "阿里山一日日出森林之旅",
+    "days": 1,
+    "image": "mountain",
+    "summary": "清晨看日出、漫步神木群,午後品茶下山,適合喜愛自然森林的旅人。",
+    "stops": [
+      { "name": "祝山觀日出", "note": "建議凌晨出發,注意保暖", "image": "mountain", "transport": "阿里山森林鐵路祝山線小火車,或搭乘園區接駁專車" },
+      { "name": "阿里山神木群棧道", "note": "森林芬多精步道,約 1.5 小時", "image": "forest", "transport": "阿里山車站步行可達" },
+      { "name": "鄒築園茶莊", "note": "品茗高山茶、揉茶體驗", "image": "tea", "transport": "建議自駕或包車,山區公車班次較少" }
+    ],
+    "carbonSavedKg": 3.6,
+    "pointsEarned": 36,
+    "baseFavorites": 128,
+    "comments": [
+      { "id": "c1", "name": "旅人小美", "text": "日出真的很值得早起!", "date": "2026-06-02" },
+      { "id": "c2", "name": "阿明", "text": "建議搭小火車上山比較省心。", "date": "2026-06-20" }
+    ]
+  },
+  {
+    "id": "itin-002",
+    "title": "嘉義市文青散策半日遊",
+    "days": 1,
+    "image": "cabin",
+    "summary": "檜意森活村、嘉義公園、文化路夜市,悠閒步行感受市區文化氣息。",
+    "stops": [
+      { "name": "檜意森活村", "note": "日式建築拍照打卡", "image": "cabin", "transport": "嘉義後站步行約 5 分鐘可達" },
+      { "name": "嘉義公園", "note": "散步、射日塔眺望市區", "image": "landmark", "transport": "從檜意森活村步行約 15 分鐘,或搭乘市區公車" },
+      { "name": "文化路夜市", "note": "晚餐品嚐雞肉飯與小吃", "image": "food-market", "transport": "步行或搭計程車約 10 分鐘" }
+    ],
+    "carbonSavedKg": 1.8,
+    "pointsEarned": 18,
+    "baseFavorites": 96,
+    "comments": [
+      { "id": "c1", "name": "小資旅行", "text": "步行就可以走完,很適合沒開車的人。", "date": "2026-05-18" }
+    ]
+  },
+  {
+    "id": "itin-003",
+    "title": "東石海岸夕陽美食一日遊",
+    "days": 1,
+    "image": "harbor",
+    "summary": "白色風車、夕陽海景、現撈蚵仔美食,適合喜歡海邊風情的旅人。",
+    "stops": [
+      { "name": "東石漁人碼頭", "note": "拍攝白色風車與夕陽", "image": "harbor", "transport": "建議自駕前往,大眾運輸班次較少" },
+      { "name": "東石漁港蚵仔專賣", "note": "品嚐現撈蚵仔料理", "image": "food-oyster", "transport": "漁人碼頭步行約 5 分鐘" },
+      { "name": "鰲鼓濕地", "note": "傍晚觀鳥,注意潮汐時間", "image": "birds", "transport": "建議自駕,車程約 15 分鐘" }
+    ],
+    "carbonSavedKg": 2.2,
+    "pointsEarned": 22,
+    "baseFavorites": 74,
+    "comments": []
+  },
+  {
+    "id": "itin-004",
+    "title": "奮起湖鐵道懷舊二日遊",
+    "days": 2,
+    "image": "train",
+    "summary": "搭乘阿里山森林小火車,漫遊奮起湖老街,品嚐經典鐵路便當。",
+    "stops": [
+      { "name": "阿里山森林鐵路", "note": "建議提前預訂車票", "image": "train", "transport": "嘉義火車站搭乘,建議提前預訂車票" },
+      { "name": "奮起湖老街", "note": "百年老街,木片便當盒懷舊風味", "image": "food-box", "transport": "奮起湖車站出站即達" },
+      { "name": "阿里山賓館(住宿)", "note": "第二日清晨可安排看日出", "image": "hotel-mountain", "transport": "建議搭乘接駁車,山區道路請謹慎慢行" }
+    ],
+    "carbonSavedKg": 5.4,
+    "pointsEarned": 54,
+    "baseFavorites": 61,
+    "comments": [
+      { "id": "c1", "name": "鐵道迷阿強", "text": "便當真的必吃,懷舊感十足。", "date": "2026-04-10" }
+    ]
+  }
+]

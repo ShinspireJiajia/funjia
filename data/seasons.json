@@ -1,0 +1,54 @@
+[
+  {
+    "id": "spring",
+    "months": [3, 4, 5],
+    "seasonLabel": "春季",
+    "title": "阿里山櫻花季正盛",
+    "subtitle": "粉色花浪染山林,春季限定的浪漫視野",
+    "attractionId": "attr-001",
+    "attractionName": "阿里山國家森林遊樂區",
+    "image": "../assets/阿里山櫻花季.jpg",
+    "tone": "pink",
+    "icon": "fa-seedling",
+    "ctaLabel": "看櫻花景點"
+  },
+  {
+    "id": "summer",
+    "months": [6, 7, 8],
+    "seasonLabel": "夏季",
+    "title": "東石海風,盛夏消暑首選",
+    "subtitle": "白色風車伴著夕陽,吹海風、嚐鮮蚵,清涼一整夏",
+    "attractionId": "attr-004",
+    "attractionName": "東石漁人碼頭",
+    "image": "../assets/東石漁人碼頭消暑.jpg",
+    "tone": "blue",
+    "icon": "fa-water",
+    "ctaLabel": "規劃海濱行程"
+  },
+  {
+    "id": "autumn",
+    "months": [9, 10, 11],
+    "seasonLabel": "秋季",
+    "title": "秋涼奮起湖,老街鐵道慢旅",
+    "subtitle": "森林鐵道穿雲霧,一口便當、一口秋意",
+    "attractionId": "attr-005",
+    "attractionName": "阿里山小火車奮起湖車站",
+    "image": "../assets/奮起湖鐵道慢旅.jpg",
+    "tone": "brown",
+    "icon": "fa-train",
+    "ctaLabel": "探索鐵道老街"
+  },
+  {
+    "id": "winter",
+    "months": [12, 1, 2],
+    "seasonLabel": "冬季",
+    "title": "阿里山雲海日出",
+    "subtitle": "冬季空氣通透,金色雲海翻騰機率最高",
+    "attractionId": "attr-001",
+    "attractionName": "阿里山國家森林遊樂區",
+    "image": "../assets/阿里山雲海日出.jpg",
+    "tone": "teal",
+    "icon": "fa-cloud-sun",
+    "ctaLabel": "看日出雲海"
+  }
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "id": "bus-001",
+    "type": "bus",
+    "name": "嘉義火車站(公車站)",
+    "category": "公車站",
+    "address": "嘉義市中山路1號前",
+    "hours": "05:30–22:30",
+    "tags": ["轉運", "市區"],
+    "image": "bus-stop",
+    "lat": 23.4808,
+    "lng": 120.4437,
+    "routes": [
+      { "routeName": "7329 阿里山線", "direction": "往阿里山", "eta": 12 },
+      { "routeName": "BRT 幹線", "direction": "往嘉義市區", "eta": 4 }
+    ],
+    "description": "嘉義市重要公車轉運節點,可轉乘往阿里山、東石等地路線。"
+  },
+  {
+    "id": "bus-002",
+    "type": "bus",
+    "name": "觸口轉運站",
+    "category": "公車站",
+    "address": "嘉義縣番路鄉觸口村1號",
+    "hours": "06:00–19:00",
+    "tags": ["低碳轉乘", "阿里山線"],
+    "image": "bus-stop",
+    "lat": 23.4436,
+    "lng": 120.6212,
+    "routes": [
+      { "routeName": "7329 阿里山線", "direction": "往阿里山森林遊樂區", "eta": 8 },
+      { "routeName": "7322 石卓線", "direction": "往石卓、奮起湖", "eta": 25 }
+    ],
+    "description": "建議自駕遊客於此停車轉乘公車上山,系統將提供減碳積分獎勵(規劃中)。"
+  },
+  {
+    "id": "bus-003",
+    "type": "bus",
+    "name": "檜意森活村(公車站)",
+    "category": "公車站",
+    "address": "嘉義市林森東路1號前",
+    "hours": "06:00–22:00",
+    "tags": ["市區", "文創園區"],
+    "image": "bus-stop",
+    "lat": 23.4759,
+    "lng": 120.4507,
+    "routes": [
+      { "routeName": "市區觀光巡迴線", "direction": "往文化路夜市", "eta": 6 },
+      { "routeName": "6001 台鐵接駁", "direction": "往嘉義火車站", "eta": 15 }
+    ],
+    "description": "鄰近檜意森活村與嘉義公園,方便串連市區文化景點。"
+  },
+  {
+    "id": "bus-004",
+    "type": "bus",
+    "name": "阿里山(公車站)",
+    "category": "公車站",
+    "address": "嘉義縣阿里山鄉香林村阿里山管理處前",
+    "hours": "06:00–17:30",
+    "tags": ["阿里山", "森林遊樂區"],
+    "image": "bus-stop",
+    "lat": 23.5089,
+    "lng": 120.8042,
+    "routes": [
+      { "routeName": "7329 阿里山線", "direction": "往嘉義市區(經觸口)", "eta": 20 },
+      { "routeName": "台灣好行 阿里山線", "direction": "往奮起湖、石卓", "eta": 35 }
+    ],
+    "description": "阿里山國家森林遊樂區入口公車站,可轉乘台灣好行前往奮起湖等周邊景點。"
+  },
+  {
+    "id": "bus-005",
+    "type": "bus",
+    "name": "奮起湖(公車站)",
+    "category": "公車站",
+    "address": "嘉義縣竹崎鄉奮起湖57號前",
+    "hours": "06:00–18:30",
+    "tags": ["奮起湖", "鐵道"],
+    "image": "bus-stop",
+    "lat": 23.5049,
+    "lng": 120.6969,
+    "routes": [
+      { "routeName": "7322 石卓線", "direction": "往嘉義市區", "eta": 18 },
+      { "routeName": "台灣好行 阿里山線", "direction": "往阿里山森林遊樂區", "eta": 30 }
+    ],
+    "description": "緊鄰奮起湖老街與火車站,是阿里山公路中繼轉乘站。"
+  },
+  {
+    "id": "bus-006",
+    "type": "bus",
+    "name": "圓潭(公車站)",
+    "category": "公車站",
+    "address": "嘉義縣番路鄉觸口村圓潭",
+    "hours": "06:00–19:00",
+    "tags": ["生態園區", "阿里山線"],
+    "image": "bus-stop",
+    "lat": 23.4419,
+    "lng": 120.6175,
+    "routes": [
+      { "routeName": "7329 阿里山線", "direction": "往觸口、嘉義市區", "eta": 10 },
+      { "routeName": "7329 阿里山線", "direction": "往阿里山方向", "eta": 22 }
+    ],
+    "description": "圓潭生態園區門口站牌,與觸口轉運站僅一站之隔。"
+  },
+  {
+    "id": "bus-007",
+    "type": "bus",
+    "name": "太平雲梯(公車站)",
+    "category": "公車站",
+    "address": "嘉義縣梅山鄉太平村89-6號前",
+    "hours": "08:00–17:00",
+    "tags": ["太平雲梯", "假日接駁"],
+    "image": "bus-stop",
+    "lat": 23.5611,
+    "lng": 120.5902,
+    "routes": [
+      { "routeName": "梅山鄉太平雲梯接駁車", "direction": "往梅山轉運站(停車場接駁)", "eta": 15 },
+      { "routeName": "台灣好行 雲嘉南濱海線", "direction": "往嘉義高鐵站", "eta": 40 }
+    ],
+    "description": "假日建議於山下轉運站停車後轉乘接駁車上山,避免太平雲梯周邊道路壅塞。"
+  },
+  {
+    "id": "bus-008",
+    "type": "bus",
+    "name": "布袋觀光漁市(公車站)",
+    "category": "公車站",
+    "address": "嘉義縣布袋鎮新厝仔海景街前",
+    "hours": "06:00–20:00",
+    "tags": ["布袋", "海濱景點"],
+    "image": "bus-stop",
+    "lat": 23.3835,
+    "lng": 120.1490,
+    "routes": [
+      { "routeName": "7211 布袋線", "direction": "往嘉義高鐵站", "eta": 25 },
+      { "routeName": "7211 布袋線", "direction": "往朴子", "eta": 12 }
+    ],
+    "description": "布袋觀光漁市與遊艇碼頭前站牌,可轉乘往嘉義高鐵站或朴子市區。"
+  },
+  {
+    "id": "bus-009",
+    "type": "bus",
+    "name": "曾文水庫大壩(公車站)",
+    "category": "公車站",
+    "address": "台南市楠西區慶生里66號前",
+    "hours": "08:00–17:00",
+    "tags": ["曾文水庫", "台灣好行"],
+    "image": "bus-stop",
+    "lat": 23.2458,
+    "lng": 120.5214,
+    "routes": [
+      { "routeName": "台灣好行 曾文水庫線", "direction": "往嘉義高鐵站", "eta": 45 },
+      { "routeName": "台灣好行 曾文水庫線", "direction": "往烏山頭水庫", "eta": 60 }
+    ],
+    "description": "曾文水庫風景區入口站牌,班次較少,建議自駕轉乘或先查詢時刻表。"
+  },
+  {
+    "id": "bus-010",
+    "type": "bus",
+    "name": "故宮南院(公車站)",
+    "category": "公車站",
+    "address": "嘉義縣太保市故宮大道888號前",
+    "hours": "08:00–18:00",
+    "tags": ["故宮南院", "高鐵接駁"],
+    "image": "bus-stop",
+    "lat": 23.4590,
+    "lng": 120.3215,
+    "routes": [
+      { "routeName": "故宮南院接駁公車", "direction": "往嘉義高鐵站", "eta": 10 },
+      { "routeName": "7315 故宮南院線", "direction": "往嘉義火車站", "eta": 28 }
+    ],
+    "description": "故宮南院園區門口站牌,與嘉義高鐵站往返班次密集,建議優先搭乘接駁公車前往。"
+  }
+]

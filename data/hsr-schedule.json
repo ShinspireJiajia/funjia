@@ -1,0 +1,23 @@
+[
+  { "id": "hsr-n-01", "type": "hsr", "direction": "north", "trainNo": "608", "from": "嘉義", "to": "南港", "departure": "06:12", "arrival": "07:41", "note": "行經台中、板橋" },
+  { "id": "hsr-n-02", "type": "hsr", "direction": "north", "trainNo": "616", "from": "嘉義", "to": "南港", "departure": "07:05", "arrival": "08:34", "note": "行經台中、板橋" },
+  { "id": "hsr-n-03", "type": "hsr", "direction": "north", "trainNo": "624", "from": "嘉義", "to": "南港", "departure": "07:48", "arrival": "09:17", "note": "行經台中" },
+  { "id": "hsr-n-04", "type": "hsr", "direction": "north", "trainNo": "632", "from": "嘉義", "to": "台北", "departure": "08:32", "arrival": "10:03", "note": "行經台中、板橋" },
+  { "id": "hsr-n-05", "type": "hsr", "direction": "north", "trainNo": "640", "from": "嘉義", "to": "南港", "departure": "09:15", "arrival": "10:44", "note": "行經台中" },
+  { "id": "hsr-n-06", "type": "hsr", "direction": "north", "trainNo": "648", "from": "嘉義", "to": "台北", "departure": "10:41", "arrival": "12:10", "note": "行經台中、板橋" },
+  { "id": "hsr-n-07", "type": "hsr", "direction": "north", "trainNo": "656", "from": "嘉義", "to": "南港", "departure": "12:07", "arrival": "13:36", "note": "行經台中" },
+  { "id": "hsr-n-08", "type": "hsr", "direction": "north", "trainNo": "664", "from": "嘉義", "to": "台北", "departure": "14:23", "arrival": "15:52", "note": "行經台中、板橋" },
+  { "id": "hsr-n-09", "type": "hsr", "direction": "north", "trainNo": "672", "from": "嘉義", "to": "南港", "departure": "16:48", "arrival": "18:17", "note": "行經台中" },
+  { "id": "hsr-n-10", "type": "hsr", "direction": "north", "trainNo": "680", "from": "嘉義", "to": "台北", "departure": "19:02", "arrival": "20:31", "note": "行經台中、板橋" },
+  { "id": "hsr-n-11", "type": "hsr", "direction": "north", "trainNo": "688", "from": "嘉義", "to": "南港", "departure": "20:45", "arrival": "22:14", "note": "行經台中" },
+  { "id": "hsr-s-01", "type": "hsr", "direction": "south", "trainNo": "615", "from": "嘉義", "to": "左營", "departure": "06:20", "arrival": "06:52", "note": "行經台南" },
+  { "id": "hsr-s-02", "type": "hsr", "direction": "south", "trainNo": "623", "from": "嘉義", "to": "左營", "departure": "07:10", "arrival": "07:42", "note": "行經台南" },
+  { "id": "hsr-s-03", "type": "hsr", "direction": "south", "trainNo": "631", "from": "嘉義", "to": "左營", "departure": "08:05", "arrival": "08:37", "note": "行經台南" },
+  { "id": "hsr-s-04", "type": "hsr", "direction": "south", "trainNo": "639", "from": "嘉義", "to": "左營", "departure": "09:22", "arrival": "09:54", "note": "直達" },
+  { "id": "hsr-s-05", "type": "hsr", "direction": "south", "trainNo": "647", "from": "嘉義", "to": "左營", "departure": "10:48", "arrival": "11:20", "note": "行經台南" },
+  { "id": "hsr-s-06", "type": "hsr", "direction": "south", "trainNo": "655", "from": "嘉義", "to": "左營", "departure": "12:15", "arrival": "12:47", "note": "行經台南" },
+  { "id": "hsr-s-07", "type": "hsr", "direction": "south", "trainNo": "663", "from": "嘉義", "to": "左營", "departure": "14:30", "arrival": "15:02", "note": "直達" },
+  { "id": "hsr-s-08", "type": "hsr", "direction": "south", "trainNo": "671", "from": "嘉義", "to": "左營", "departure": "16:55", "arrival": "17:27", "note": "行經台南" },
+  { "id": "hsr-s-09", "type": "hsr", "direction": "south", "trainNo": "679", "from": "嘉義", "to": "左營", "departure": "19:10", "arrival": "19:42", "note": "行經台南" },
+  { "id": "hsr-s-10", "type": "hsr", "direction": "south", "trainNo": "687", "from": "嘉義", "to": "左營", "departure": "20:52", "arrival": "21:24", "note": "直達" }
+]

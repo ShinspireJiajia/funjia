@@ -1,0 +1,74 @@
+[
+  {
+    "id": "badge-001",
+    "title": "阿里山雲海日出",
+    "desc": "抵達阿里山國家森林遊樂區,打卡收集雲海日出徽章",
+    "icon": "fa-mountain-sun",
+    "tone": "orange",
+    "type": "attractions",
+    "refId": "attr-001",
+    "lat": 23.5098,
+    "lng": 120.8034,
+    "radius": 800
+  },
+  {
+    "id": "badge-002",
+    "title": "檜意森活村散策",
+    "desc": "走訪日式檜木建築群,打卡收集文青散策徽章",
+    "icon": "fa-torii-gate",
+    "tone": "brown",
+    "type": "attractions",
+    "refId": "attr-002",
+    "lat": 23.4759,
+    "lng": 120.4507,
+    "radius": 300
+  },
+  {
+    "id": "badge-003",
+    "title": "北回歸線地標",
+    "desc": "站上北回歸線標誌,打卡收集地球緯度徽章",
+    "icon": "fa-globe",
+    "tone": "blue",
+    "type": "attractions",
+    "refId": "attr-003",
+    "lat": 23.4974,
+    "lng": 120.3081,
+    "radius": 300
+  },
+  {
+    "id": "badge-004",
+    "title": "東石漁港夕陽",
+    "desc": "在白色風車前欣賞夕陽,打卡收集漁港夕照徽章",
+    "icon": "fa-water",
+    "tone": "teal",
+    "type": "attractions",
+    "refId": "attr-004",
+    "lat": 23.4517,
+    "lng": 120.1517,
+    "radius": 500
+  },
+  {
+    "id": "badge-005",
+    "title": "奮起湖鐵道慢旅",
+    "desc": "漫遊百年林鐵中繼站老街,打卡收集鐵道文化徽章",
+    "icon": "fa-train",
+    "tone": "green",
+    "type": "attractions",
+    "refId": "attr-005",
+    "lat": 23.5052,
+    "lng": 120.6975,
+    "radius": 400
+  },
+  {
+    "id": "badge-006",
+    "title": "太平雲梯凌空",
+    "desc": "踏上全台最長仿木紋高山吊橋,打卡收集雲梯凌空徽章",
+    "icon": "fa-person-hiking",
+    "tone": "pink",
+    "type": "attractions",
+    "refId": "attr-008",
+    "lat": 23.5615,
+    "lng": 120.5906,
+    "radius": 500
+  }
+]

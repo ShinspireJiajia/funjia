@@ -1,0 +1,53 @@
+[
+  {
+    "id": "event-001",
+    "type": "events",
+    "name": "阿里山櫻花季",
+    "category": "季節活動",
+    "address": "阿里山國家森林遊樂區",
+    "hours": "全日",
+    "startDate": "2026-03-01",
+    "endDate": "2026-04-10",
+    "tags": ["熱門", "賞櫻", "季節限定"],
+    "rating": 4.8,
+    "isHot": true,
+    "image": "sakura",
+    "lat": 23.5098,
+    "lng": 120.8034,
+    "description": "每年吸引大量遊客的賞櫻盛事,園區內千櫻園、吉野櫻大道皆為熱門拍照點。"
+  },
+  {
+    "id": "event-002",
+    "type": "events",
+    "name": "嘉義市國際管樂節",
+    "category": "藝文活動",
+    "address": "嘉義市文化中心廣場",
+    "hours": "10:00–21:00",
+    "startDate": "2026-12-24",
+    "endDate": "2026-12-27",
+    "tags": ["熱門", "音樂", "藝文"],
+    "rating": 4.6,
+    "isHot": true,
+    "image": "music",
+    "lat": 23.4795,
+    "lng": 120.4522,
+    "description": "亞洲重要的管樂盛事,匯集國內外樂團於嘉義市街頭與展演場館演出。"
+  },
+  {
+    "id": "event-003",
+    "type": "events",
+    "name": "東石鰲鼓濕地觀鳥季",
+    "category": "生態活動",
+    "address": "嘉義縣東石鄉鰲鼓濕地",
+    "hours": "06:00–18:00",
+    "startDate": "2026-11-01",
+    "endDate": "2027-02-28",
+    "tags": ["生態", "觀鳥"],
+    "rating": 4.3,
+    "isHot": false,
+    "image": "birds",
+    "lat": 23.4308,
+    "lng": 120.1233,
+    "description": "冬季候鳥棲息地,適合親子與生態愛好者的低碳旅遊行程。"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "deal-001",
+    "kind": "coupon",
+    "badge": "優惠",
+    "title": "阿里山國家森林遊樂區門票 8 折",
+    "desc": "出示 App 頁面享景區門票 8 折優惠",
+    "validUntil": "2026-08-31",
+    "icon": "fa-ticket",
+    "tone": "orange",
+    "type": "attractions",
+    "refId": "attr-001"
+  },
+  {
+    "id": "deal-002",
+    "kind": "event",
+    "badge": "活動",
+    "title": "阿里山櫻花季",
+    "desc": "3/1–4/10 千櫻園、吉野櫻大道盛開,賞櫻最佳時機",
+    "validUntil": "2026-04-10",
+    "icon": "fa-seedling",
+    "tone": "pink",
+    "type": "events",
+    "refId": "event-001"
+  },
+  {
+    "id": "deal-003",
+    "kind": "coupon",
+    "badge": "優惠",
+    "title": "噴水雞肉飯 加飯不加價",
+    "desc": "出示 App 頁面用餐,白飯免費加購一次",
+    "validUntil": "2026-09-30",
+    "icon": "fa-bowl-rice",
+    "tone": "green",
+    "type": "shops",
+    "refId": "shop-001"
+  },
+  {
+    "id": "deal-004",
+    "kind": "event",
+    "badge": "活動",
+    "title": "嘉義市國際管樂節",
+    "desc": "12/24–12/27 文化中心廣場,國內外樂團街頭展演",
+    "validUntil": "2026-12-27",
+    "icon": "fa-music",
+    "tone": "teal",
+    "type": "events",
+    "refId": "event-002"
+  },
+  {
+    "id": "deal-005",
+    "kind": "coupon",
+    "badge": "優惠",
+    "title": "檜意森活村 文創商品 9 折",
+    "desc": "園區指定文創商店消費滿千享 9 折優惠",
+    "validUntil": "2026-10-31",
+    "icon": "fa-store",
+    "tone": "brown",
+    "type": "attractions",
+    "refId": "attr-002"
+  },
+  {
+    "id": "deal-006",
+    "kind": "event",
+    "badge": "活動",
+    "title": "東石鰲鼓濕地觀鳥季",
+    "desc": "11/1–2/28 冬季候鳥棲息地,適合親子生態旅遊",
+    "validUntil": "2027-02-28",
+    "icon": "fa-dove",
+    "tone": "blue",
+    "type": "events",
+    "refId": "event-003"
+  }
+]

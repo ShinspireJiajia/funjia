@@ -1,0 +1,118 @@
+[
+  {
+    "id": "mission-001",
+    "category": "explore",
+    "title": "奮起湖鐵道慢旅打卡",
+    "desc": "走進百年林鐵中繼站老街,於奮起湖車站前打卡,收集鐵道慢旅探索徽章",
+    "icon": "fa-train",
+    "tone": "green",
+    "type": "attractions",
+    "refId": "attr-005",
+    "verifyMethod": "gps",
+    "verifyConfig": { "lat": 23.5052, "lng": 120.6975, "radius": 400 },
+    "reward": { "points": 30, "badgeTitle": "鐵道慢旅探索者" },
+    "startDate": null,
+    "endDate": null,
+    "dailyLimit": 1
+  },
+  {
+    "id": "mission-002",
+    "category": "explore",
+    "title": "東石漁人碼頭夕陽獵人",
+    "desc": "在白色風車前捕捉夕陽美景,完成打卡收集漁港夕照徽章",
+    "icon": "fa-water",
+    "tone": "teal",
+    "type": "attractions",
+    "refId": "attr-004",
+    "verifyMethod": "gps",
+    "verifyConfig": { "lat": 23.4517, "lng": 120.1517, "radius": 500 },
+    "reward": { "points": 20, "badgeTitle": "漁港夕照獵人" },
+    "startDate": null,
+    "endDate": null,
+    "dailyLimit": 1
+  },
+  {
+    "id": "mission-003",
+    "category": "culture",
+    "title": "山林鐵道記憶問答",
+    "desc": "認識阿里山森林鐵路與奮起湖中繼站的故事,回答問題深化文化理解",
+    "icon": "fa-book-open",
+    "tone": "brown",
+    "type": "attractions",
+    "refId": "attr-001",
+    "verifyMethod": "quiz",
+    "verifyConfig": {
+      "questions": [
+        {
+          "q": "阿里山森林鐵路在日治時期興建的主要用途是?",
+          "options": ["運送檜木林木", "載運觀光客", "運送茶葉", "軍事運輸"],
+          "answerIndex": 0
+        },
+        {
+          "q": "奮起湖在阿里山森林鐵路中扮演的角色是?",
+          "options": ["起點站", "中繼補給站", "終點站", "已廢止無使用"],
+          "answerIndex": 1
+        }
+      ]
+    },
+    "reward": { "points": 25, "badgeTitle": "山林鐵道記憶者", "note": "答對全部問題可額外獲得奮起湖百年老街便當本舖優惠" },
+    "startDate": null,
+    "endDate": null,
+    "dailyLimit": 1
+  },
+  {
+    "id": "mission-004",
+    "category": "culture",
+    "title": "檜意森活村職人工藝巡禮",
+    "desc": "走訪檜意森活村日式建築群與文創職人工作室,現場掃描任務 QR Code 了解工藝故事",
+    "icon": "fa-torii-gate",
+    "tone": "brown",
+    "type": "attractions",
+    "refId": "attr-002",
+    "verifyMethod": "qrcode",
+    "verifyConfig": {
+      "code": "HINOKI2026",
+      "hint": "請於檜意森活村入口服務台掃描任務 QR Code,或輸入代碼完成任務(示範代碼:HINOKI2026)"
+    },
+    "reward": { "points": 25, "badgeTitle": "檜意職人巡禮者" },
+    "startDate": "2026-12-20",
+    "endDate": "2026-12-27",
+    "dailyLimit": 1
+  },
+  {
+    "id": "mission-005",
+    "category": "lowcarbon",
+    "title": "公車上阿里山低碳任務",
+    "desc": "搭乘公車或森林鐵路上山,不自駕上阿里山,完成低碳出行任務",
+    "icon": "fa-bus",
+    "tone": "blue",
+    "type": "attractions",
+    "refId": "attr-001",
+    "verifyMethod": "transit",
+    "verifyConfig": {
+      "hint": "請於搭乘公車/小火車抵達阿里山國家森林遊樂區後回報低碳出行紀錄(示範階段為自主回報模擬,正式上線將串接電子票證/GPS 軌跡驗證)"
+    },
+    "reward": { "points": 40, "badgeTitle": "低碳上山者" },
+    "startDate": null,
+    "endDate": null,
+    "dailyLimit": 1
+  },
+  {
+    "id": "mission-006",
+    "category": "lowcarbon",
+    "title": "自備環保杯任務",
+    "desc": "出遊時自備環保杯或環保餐具消費,減少一次性容器使用,隨手做到低碳旅行",
+    "icon": "fa-mug-saucer",
+    "tone": "green",
+    "type": null,
+    "refId": null,
+    "verifyMethod": "photo",
+    "verifyConfig": {
+      "hint": "請拍攝你使用環保杯/環保餐具消費的照片作為任務憑證(示範階段上傳即視為完成,正式上線將導入店家核銷或影像辨識)"
+    },
+    "reward": { "points": 15, "badgeTitle": "環保隨行者" },
+    "startDate": null,
+    "endDate": null,
+    "dailyLimit": 1
+  }
+]

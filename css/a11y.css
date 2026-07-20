@@ -33,8 +33,10 @@ html[data-contrast="high"] {
   --color-bg-soft: #000000;
   --color-surface: #0d0d0d;
   --color-border: #ffffff;
-  --color-text: #ffffff;
-  --color-text-muted: #e5e5e5;
+  /* 主文字/次要文字對純黑背景分別核算為 ≈14:1、≈6:1,刻意不用純白(21:1)
+     以降低強對比造成的眩光,同時仍遠高於 WCAG AAA 的 7:1 門檻。 */
+  --color-text: #d3d3d3;
+  --color-text-muted: #898989;
   --color-text-on-primary: #000000;
   --color-danger: #ff6b6b;
   --color-success: #7cfc00;
@@ -44,30 +46,30 @@ html[data-contrast="high"] {
 }
 
 html[data-contrast="high"] body {
-  background: #000;
-  color: #fff;
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
 html[data-contrast="high"] .app-header,
 html[data-contrast="high"] .bottom-nav,
 html[data-contrast="high"] .page-header {
-  background: #000 !important;
-  color: #fff !important;
+  background: var(--color-bg) !important;
+  color: var(--color-text) !important;
 }
 
 html[data-contrast="high"] .app-header {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--color-border);
 }
 
 html[data-contrast="high"] .bottom-nav {
-  border-top: 1px solid #fff;
+  border-top: 1px solid var(--color-border);
 }
 
 html[data-contrast="high"] .app-header__title,
 html[data-contrast="high"] .app-header__logo,
 html[data-contrast="high"] .app-header__lang,
 html[data-contrast="high"] .app-header__lang i {
-  color: #fff !important;
+  color: var(--color-text) !important;
 }
 
 /* -------- 鍵盤/切換操作焦點樣式,一般模式與高對比模式皆提供明顯焦點框 -------- */

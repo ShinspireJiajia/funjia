@@ -94,5 +94,37 @@
     "lat": 23.4590,
     "lng": 120.3182,
     "description": "緊鄰高鐵嘉義站出口,方便旅客轉乘單車前往鄰近景點。"
+  },
+  {
+    "id": "ubike-007",
+    "type": "youbike",
+    "name": "YouBike微笑單車-民雄火車站",
+    "category": "YouBike站點",
+    "address": "嘉義縣民雄鄉中樂路民雄火車站前",
+    "hours": "24 小時",
+    "totalDocks": 20,
+    "availableBikes": 9,
+    "availableDocks": 11,
+    "tags": ["轉乘", "民雄"],
+    "image": "bike-station",
+    "lat": 23.5500,
+    "lng": 120.4319,
+    "description": "民雄火車站前站點,騎乘可達民雄金桔農場、民雄鬼屋等鄉內景點。"
+  },
+  {
+    "id": "ubike-008",
+    "type": "youbike",
+    "name": "YouBike微笑單車-朴子市區",
+    "category": "YouBike站點",
+    "address": "嘉義縣朴子市開元路(配天宮周邊)",
+    "hours": "24 小時",
+    "totalDocks": 18,
+    "availableBikes": 12,
+    "availableDocks": 6,
+    "tags": ["朴子", "廟口"],
+    "image": "bike-station",
+    "lat": 23.4646,
+    "lng": 120.2480,
+    "description": "配天宮周邊站點,適合租借單車遊覽朴子老街與配天宮商圈。"
   }
 ]

@@ -70,5 +70,29 @@
     "tone": "blue",
     "type": "events",
     "refId": "event-003"
+  },
+  {
+    "id": "deal-007",
+    "kind": "coupon",
+    "badge": "優惠",
+    "title": "新港飴老店 伴手禮 9 折",
+    "desc": "出示 App 頁面購買新港飴伴手禮享 9 折優惠",
+    "validUntil": "2026-12-31",
+    "icon": "fa-candy-cane",
+    "tone": "orange",
+    "type": "shops",
+    "refId": "shop-006"
+  },
+  {
+    "id": "deal-008",
+    "kind": "event",
+    "badge": "活動",
+    "title": "民雄金桔文化節",
+    "desc": "11/14–11/15 民雄金桔觀光工廠周邊,採果體驗與農特產展售",
+    "validUntil": "2026-11-15",
+    "icon": "fa-seedling",
+    "tone": "green",
+    "type": "events",
+    "refId": "event-005"
   }
 ]

@@ -70,5 +70,53 @@
     "lat": 23.5615,
     "lng": 120.5906,
     "radius": 500
+  },
+  {
+    "id": "badge-007",
+    "title": "新港奉天宮參拜",
+    "desc": "至新港奉天宮參拜媽祖,打卡收集信仰文化徽章",
+    "icon": "fa-place-of-worship",
+    "tone": "orange",
+    "type": "attractions",
+    "refId": "attr-012",
+    "lat": 23.5518,
+    "lng": 120.3441,
+    "radius": 300
+  },
+  {
+    "id": "badge-008",
+    "title": "民雄金桔田園",
+    "desc": "走訪民雄金桔觀光工廠,打卡收集田園採果徽章",
+    "icon": "fa-seedling",
+    "tone": "green",
+    "type": "attractions",
+    "refId": "attr-014",
+    "lat": 23.5507,
+    "lng": 120.4265,
+    "radius": 300
+  },
+  {
+    "id": "badge-009",
+    "title": "蒜頭糖廠鐵支路",
+    "desc": "搭乘蒜頭糖廠五分車小火車,打卡收集製糖鐵道徽章",
+    "icon": "fa-industry",
+    "tone": "brown",
+    "type": "attractions",
+    "refId": "attr-019",
+    "lat": 23.5192,
+    "lng": 120.2853,
+    "radius": 400
+  },
+  {
+    "id": "badge-010",
+    "title": "大埔水庫戀人",
+    "desc": "在大埔情人公園眺望曾文水庫,打卡收集水庫戀人徽章",
+    "icon": "fa-water",
+    "tone": "blue",
+    "type": "attractions",
+    "refId": "attr-023",
+    "lat": 23.2739,
+    "lng": 120.5967,
+    "radius": 400
   }
 ]

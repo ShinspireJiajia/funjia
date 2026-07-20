@@ -168,5 +168,73 @@
       { "routeName": "7315 故宮南院線", "direction": "往嘉義火車站", "eta": 28 }
     ],
     "description": "故宮南院園區門口站牌,與嘉義高鐵站往返班次密集,建議優先搭乘接駁公車前往。"
+  },
+  {
+    "id": "bus-011",
+    "type": "bus",
+    "name": "新港奉天宮(公車站)",
+    "category": "公車站",
+    "address": "嘉義縣新港鄉新民路奉天宮前",
+    "hours": "06:00–21:00",
+    "tags": ["新港", "廟口"],
+    "image": "bus-stop",
+    "lat": 23.5518,
+    "lng": 120.3441,
+    "routes": [
+      { "routeName": "7304 新港線", "direction": "往嘉義火車站", "eta": 20 },
+      { "routeName": "7304 新港線", "direction": "往板頭社區", "eta": 8 }
+    ],
+    "description": "新港奉天宮廟埕前站牌,可轉乘往嘉義市區或板陶窯交趾剪黏工藝園區。"
+  },
+  {
+    "id": "bus-012",
+    "type": "bus",
+    "name": "民雄(台鐵站前公車站)",
+    "category": "公車站",
+    "address": "嘉義縣民雄鄉中樂路民雄火車站前",
+    "hours": "06:00–22:00",
+    "tags": ["民雄", "台鐵接駁"],
+    "image": "bus-stop",
+    "lat": 23.5500,
+    "lng": 120.4320,
+    "routes": [
+      { "routeName": "7301 民雄線", "direction": "往嘉義火車站", "eta": 15 },
+      { "routeName": "民雄鄉觀光接駁", "direction": "往金桔農場、民雄鬼屋", "eta": 12 }
+    ],
+    "description": "民雄火車站前站牌,可轉乘接駁前往民雄金桔觀光工廠與民雄鬼屋等景點。"
+  },
+  {
+    "id": "bus-013",
+    "type": "bus",
+    "name": "朴子(轉運站)",
+    "category": "公車站",
+    "address": "嘉義縣朴子市山通路",
+    "hours": "06:00–21:30",
+    "tags": ["朴子", "轉運"],
+    "image": "bus-stop",
+    "lat": 23.4635,
+    "lng": 120.2495,
+    "routes": [
+      { "routeName": "7211 布袋線", "direction": "往布袋觀光漁市", "eta": 15 },
+      { "routeName": "7211 布袋線", "direction": "往嘉義高鐵站", "eta": 30 }
+    ],
+    "description": "朴子市區轉運站,可轉乘往布袋、東石等濱海鄉鎮或嘉義高鐵站。"
+  },
+  {
+    "id": "bus-014",
+    "type": "bus",
+    "name": "中埔轉運站",
+    "category": "公車站",
+    "address": "嘉義縣中埔鄉沄水村",
+    "hours": "06:00–19:00",
+    "tags": ["中埔", "阿里山線"],
+    "image": "bus-stop",
+    "lat": 23.4515,
+    "lng": 120.5628,
+    "routes": [
+      { "routeName": "台灣好行 獨角仙線", "direction": "往獨角仙休閒農場", "eta": 20 },
+      { "routeName": "7329 阿里山線", "direction": "往觸口、阿里山", "eta": 25 }
+    ],
+    "description": "中埔鄉市區轉運站,可轉乘台灣好行前往獨角仙休閒農場、頂笨仔等淺山景點。"
   }
 ]

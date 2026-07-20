@@ -114,5 +114,40 @@
     "startDate": null,
     "endDate": null,
     "dailyLimit": 1
+  },
+  {
+    "id": "mission-007",
+    "category": "explore",
+    "title": "獨角仙生態探索任務",
+    "desc": "走訪中埔鄉獨角仙休閒農場,於園區內打卡完成生態探索任務",
+    "icon": "fa-seedling",
+    "tone": "green",
+    "type": "attractions",
+    "refId": "attr-021",
+    "verifyMethod": "gps",
+    "verifyConfig": { "lat": 23.4098, "lng": 120.5311, "radius": 300 },
+    "reward": { "points": 20, "badgeTitle": "獨角仙生態探索者" },
+    "startDate": null,
+    "endDate": null,
+    "dailyLimit": 1
+  },
+  {
+    "id": "mission-008",
+    "category": "culture",
+    "title": "交趾剪黏工藝巡禮",
+    "desc": "走訪板陶窯交趾剪黏工藝園區,現場掃描任務 QR Code 認識傳統工藝故事",
+    "icon": "fa-landmark-dome",
+    "tone": "teal",
+    "type": "attractions",
+    "refId": "attr-013",
+    "verifyMethod": "qrcode",
+    "verifyConfig": {
+      "code": "BANTAO2026",
+      "hint": "請於板陶窯園區入口服務台掃描任務 QR Code,或輸入代碼完成任務(示範代碼:BANTAO2026)"
+    },
+    "reward": { "points": 25, "badgeTitle": "剪黏工藝巡禮者" },
+    "startDate": null,
+    "endDate": null,
+    "dailyLimit": 1
   }
 ]

@@ -80,5 +80,27 @@
     "cost": 400,
     "icon": "fa-person-walking-luggage",
     "tone": "gray"
+  },
+  {
+    "id": "reward-009",
+    "kind": "coupon",
+    "title": "民雄肉包 買五送一",
+    "desc": "憑兌換碼至店內購買肉包,滿五顆送一顆",
+    "cost": 90,
+    "icon": "fa-bowl-rice",
+    "tone": "orange",
+    "type": "shops",
+    "refId": "shop-007"
+  },
+  {
+    "id": "reward-010",
+    "kind": "coupon",
+    "title": "新港飴老店 伴手禮折抵 80 元",
+    "desc": "憑兌換碼消費滿 500 元折抵 80 元",
+    "cost": 130,
+    "icon": "fa-candy-cane",
+    "tone": "orange",
+    "type": "shops",
+    "refId": "shop-006"
   }
 ]

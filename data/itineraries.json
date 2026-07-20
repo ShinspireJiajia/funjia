@@ -69,5 +69,37 @@
     "comments": [
       { "id": "c1", "name": "鐵道迷阿強", "text": "便當真的必吃,懷舊感十足。", "date": "2026-04-10" }
     ]
+  },
+  {
+    "id": "itin-005",
+    "title": "嘉義縣山海小鎮文化一日遊",
+    "days": 1,
+    "image": "temple",
+    "summary": "新港奉天宮、板陶窯交趾剪黏、朴子配天宮,走訪嘉義縣平原鄉鎮的信仰與工藝之美。",
+    "stops": [
+      { "name": "新港奉天宮", "note": "參拜媽祖,品嚐新港飴", "image": "temple", "transport": "建議自駕或搭乘 7304 新港線公車" },
+      { "name": "板陶窯交趾剪黏工藝園區", "note": "體驗交趾陶、剪黏工藝彩繪", "image": "museum", "transport": "新港奉天宮車程約 10 分鐘" },
+      { "name": "朴子配天宮", "note": "參訪百年廟宇,品嚐鴨肉羹", "image": "temple", "transport": "板陶窯車程約 20 分鐘" }
+    ],
+    "carbonSavedKg": 1.5,
+    "pointsEarned": 15,
+    "baseFavorites": 42,
+    "comments": []
+  },
+  {
+    "id": "itin-006",
+    "title": "中埔大埔淺山湖泊生態二日遊",
+    "days": 2,
+    "image": "farm",
+    "summary": "獨角仙休閒農場、頂笨仔天長地久橋、大埔情人公園,深入嘉義縣淺山與湖泊祕境。",
+    "stops": [
+      { "name": "獨角仙休閒農場", "note": "昆蟲生態體驗,適合親子", "image": "farm", "transport": "建議自駕,或搭乘台灣好行獨角仙線" },
+      { "name": "頂笨仔天長地久橋", "note": "傳統聚落漫遊,認識村史文化", "image": "forest", "transport": "獨角仙休閒農場車程約 15 分鐘" },
+      { "name": "大埔情人公園(住宿)", "note": "第二日清晨可漫步水庫湖畔", "image": "reservoir", "transport": "建議自駕,山區道路請謹慎慢行" }
+    ],
+    "carbonSavedKg": 2.8,
+    "pointsEarned": 28,
+    "baseFavorites": 35,
+    "comments": []
   }
 ]

@@ -49,5 +49,39 @@
     "lat": 23.4525,
     "lng": 120.1522,
     "description": "面海景觀房型,適合喜愛夕陽與海鮮的旅人。"
+  },
+  {
+    "id": "lodge-004",
+    "type": "lodging",
+    "name": "中埔沿山民宿",
+    "category": "山區民宿",
+    "address": "嘉義縣中埔鄉社口村",
+    "hours": "全日(入住 15:00 / 退房 11:00)",
+    "phone": "05-2531789",
+    "tags": ["生態", "獨角仙農場周邊", "親子"],
+    "rating": 4.2,
+    "isHot": false,
+    "priceRange": "NT$2,000起",
+    "image": "hotel-mountain",
+    "lat": 23.4105,
+    "lng": 120.5320,
+    "description": "鄰近獨角仙休閒農場的淺山民宿,周邊生態豐富,適合親子安排中埔生態一日遊留宿。"
+  },
+  {
+    "id": "lodge-005",
+    "type": "lodging",
+    "name": "大埔水庫景觀民宿",
+    "category": "水庫民宿",
+    "address": "嘉義縣大埔鄉西興村",
+    "hours": "全日(入住 15:00 / 退房 11:00)",
+    "phone": "05-2521288",
+    "tags": ["水庫景觀", "湖景", "寧靜"],
+    "rating": 4.1,
+    "isHot": false,
+    "priceRange": "NT$2,500起",
+    "image": "hotel-mountain",
+    "lat": 23.2745,
+    "lng": 120.5972,
+    "description": "俯瞰曾文水庫嘉義縣大埔鄉水域的景觀民宿,適合喜愛湖光山色與寧靜氛圍的旅人。"
   }
 ]

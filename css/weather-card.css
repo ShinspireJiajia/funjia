@@ -5,7 +5,7 @@
 
 .weather-card {
   padding: 0;
-  color: #2f3f31;
+  color: var(--color-text);
 }
 
 .weather-card__header {
@@ -28,14 +28,16 @@
   padding-bottom: 5px;
   font-size: 15px;
   font-weight: 500;
-  color: #9a9a90;
+  color: var(--color-text-muted);
   border-bottom: 2.5px solid transparent;
 }
 
+/* 選中分頁不單靠顏色區分:同時疊加底線(border-bottom)與粗體(font-weight),
+   三個訊號中至少兩個對色弱/色盲使用者仍可辨識。 */
 .weather-tab.is-active {
-  color: #3d5140;
+  color: var(--color-primary-dark);
   font-weight: 700;
-  border-bottom-color: #c8703c;
+  border-bottom-color: var(--color-accent-dark);
 }
 
 .weather-card__main {
@@ -58,7 +60,7 @@
 
 .weather-card__icon {
   font-size: 32px;
-  color: #3d5140;
+  color: var(--color-primary-dark);
   line-height: 1;
 }
 
@@ -67,7 +69,7 @@
   font-weight: 500;
   line-height: 1;
   letter-spacing: -1px;
-  color: #2f3f31;
+  color: var(--color-text);
 }
 
 .weather-card__temp small {
@@ -79,7 +81,7 @@
 .weather-card__desc {
   font-size: 15px;
   font-weight: 500;
-  color: #6f7a6c;
+  color: var(--color-text-muted);
   margin-top: 2px;
 }
 
@@ -90,7 +92,7 @@
   gap: 5px;
   justify-content: flex-end;
   max-width: 210px;
-  background: #e8eae2;
+  background: var(--color-bg-soft);
   border-radius: 14px;
   padding: 7px;
 }
@@ -99,11 +101,11 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  background: #fff;
-  border: 1px solid #e4e1d6;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 20px;
   padding: 6px 11px;
-  color: #6f7a6c;
+  color: var(--color-text-muted);
   font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
@@ -111,7 +113,7 @@
 
 .weather-card__stat i {
   font-size: 12px;
-  color: #8a9186;
+  color: var(--color-text-muted);
 }
 
 .weather-card__stat.is-rain i {
@@ -129,7 +131,7 @@
 .weather-card__update {
   flex-shrink: 0;
   font-size: 10.5px;
-  color: #9a9a90;
+  color: var(--color-text-muted);
   white-space: nowrap;
 }
 
@@ -149,14 +151,14 @@
 }
 
 .forecast3d-header span {
-  color: #3d5140;
+  color: var(--color-primary-dark);
   font-size: 13px;
   font-weight: 700;
 }
 
 .forecast3d-header a {
   font-size: 12px;
-  color: #9a9a90;
+  color: var(--color-text-muted);
   display: flex;
   align-items: center;
   gap: 2px;
@@ -180,23 +182,23 @@
 }
 
 .forecast3d-item__label {
-  color: #8a9186;
+  color: var(--color-text-muted);
   font-size: 11px;
   font-weight: 500;
 }
 
 .forecast3d-item__icon {
   font-size: 16px;
-  color: #3d5140;
+  color: var(--color-primary-dark);
 }
 
 .forecast3d-item__temp {
-  color: #2f3f31;
+  color: var(--color-text);
   font-size: 12px;
   font-weight: 700;
 }
 
 .forecast3d-item__temp .lo {
-  color: #a8ab9f;
+  color: var(--color-text-muted);
   font-weight: 400;
 }

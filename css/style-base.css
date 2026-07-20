@@ -5,14 +5,16 @@
 =================================================================== */
 
 :root {
-  /* -------- 品牌色彩 -------- */
-  --color-primary: #2f6b3d;        /* 森林綠:主色 */
-  --color-primary-dark: #204a2a;
-  --color-primary-light: #5c9468;
-  --color-primary-bg: #eaf2ea;     /* 主色淺底(標籤、選中狀態) */
+  /* -------- 品牌色彩 --------
+     主色/強調色配白字的對比皆已核算(見 a11y.css 高對比模式註記的驗證方式):
+     --color-primary 配白字 ≈ 6.3:1,--color-accent 配白字 ≈ 5.5:1,兩者皆通過 WCAG AA(4.5:1)。 */
+  --color-primary: #0b6e4f;        /* 森林綠:主色 */
+  --color-primary-dark: #074a35;
+  --color-primary-light: #369b7b;
+  --color-primary-bg: #eef6f4;     /* 主色淺底(標籤、選中狀態) */
 
-  --color-accent: #e08a3c;         /* 大地暖橙:強調色/CTA */
-  --color-accent-dark: #c06b22;
+  --color-accent: #9d571b;         /* 大地暖橙:強調色/CTA(原色配白字僅 2.7:1,已加深至通過 AA) */
+  --color-accent-dark: #6a3b14;
   --color-accent-bg: #fbeee0;
 
   --color-bg: #ffffff;

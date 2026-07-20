@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 語音助理｜Fun 嘉</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style-base.css" />
+  <link rel="stylesheet" href="../css/a11y.css" />
+  <script src="../js/core/i18n-core.js"></script>
+  <script src="../js/core/a11y-init.js"></script>
+  <link rel="stylesheet" href="../css/page-header.css" />
+  <link rel="stylesheet" href="../css/assistant.css" />
+</head>
+<body>
+  <div class="assistant-page">
+    <header class="page-header" style="padding-bottom: 0">
+      <h1 id="assistantTitle">AI 語音助理</h1>
+    </header>
+
+    <div class="assistant-header-extra">
+      <div class="assistant-lang-chips" id="langChips"></div>
+      <button class="mute-toggle" id="muteToggle" title="開關語音朗讀" aria-label="開關語音朗讀">
+        <i class="fa-solid fa-volume-high"></i>
+      </button>
+    </div>
+
+    <div class="chat-log" id="chatLog"></div>
+
+    <div class="quick-chips" id="quickChips"></div>
+
+    <form class="assistant-input-bar" id="chatForm">
+      <input type="text" id="chatInput" />
+      <button type="submit" class="send-btn" aria-label="送出">
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </form>
+  </div>
+
+  <script src="../js/services/data-service.js"></script>
+  <script src="../js/services/weather-service.js"></script>
+  <script src="../js/assistant/i18n.js"></script>
+  <script src="../js/assistant/voice-recognition.js"></script>
+  <script src="../js/assistant/chat-engine.js"></script>
+  <script src="../js/assistant/assistant-page.js"></script>
+</body>
+</html>

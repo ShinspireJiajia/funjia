@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>智慧減碳排程｜Fun 嘉</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style-base.css" />
+  <link rel="stylesheet" href="../css/a11y.css" />
+  <script src="../js/core/i18n-core.js"></script>
+  <script src="../js/core/a11y-init.js"></script>
+  <link rel="stylesheet" href="../css/page-header.css" />
+  <link rel="stylesheet" href="../css/group-travel.css" />
+  <link rel="stylesheet" href="../css/itinerary-planner.css" />
+</head>
+<body>
+  <header class="page-header">
+    <button class="page-header__back" onclick="history.back()" aria-label="返回"><i class="fa-solid fa-arrow-left"></i></button>
+    <h1 data-i18n="pageTitle.itineraryPlanner">智慧減碳排程</h1>
+  </header>
+
+  <div class="planner-page">
+    <p class="planner-hint">
+      選擇想去的景點與行程天數,系統將依景點間距離、交通方式、停車資源、停留時長與食宿需求,
+      自動規劃低碳排的最佳參訪順序,採用建議行程還能獲得減碳點數!
+    </p>
+
+    <form id="plannerForm" class="card planner-form">
+      <div class="form-field">
+        <label for="attractionSearch">1. 選擇想去的景點</label>
+        <input type="text" id="attractionSearch" placeholder="搜尋景點名稱、分類或標籤..." />
+        <div class="spot-suggestions" id="attractionSuggestions"></div>
+        <p class="field-hint" id="selectedHint">尚未選擇任何景點,請從上方點選加入。</p>
+        <div class="custom-stops" id="selectedAttractionsList"></div>
+      </div>
+
+      <div class="form-field">
+        <label>2. 行程天數</label>
+        <div class="mode-toggle" id="tripLengthToggle">
+          <button type="button" class="mode-btn" data-length="half"><i class="fa-solid fa-sun"></i> 半日</button>
+          <button type="button" class="mode-btn is-active" data-length="day"><i class="fa-regular fa-sun"></i> 一日</button>
+          <button type="button" class="mode-btn" data-length="multi"><i class="fa-solid fa-calendar-days"></i> 多日</button>
+        </div>
+        <div class="day-stepper" id="dayStepperField" style="display: none">
+          <label for="dayCountInput">天數</label>
+          <input type="number" id="dayCountInput" min="2" max="7" value="2" />
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label>3. 交通策略</label>
+        <div class="mode-toggle" id="strategyToggle">
+          <button type="button" class="mode-btn" data-strategy="transit"><i class="fa-solid fa-bus"></i> 大眾運輸優先</button>
+          <button type="button" class="mode-btn is-active" data-strategy="balanced"><i class="fa-solid fa-scale-balanced"></i> 均衡</button>
+          <button type="button" class="mode-btn" data-strategy="drive"><i class="fa-solid fa-car"></i> 自駕為主</button>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-accent" style="width: 100%">
+        <i class="fa-solid fa-wand-magic-sparkles"></i> 開始智慧排程
+      </button>
+    </form>
+
+    <div id="planResult"></div>
+  </div>
+
+  <script src="../js/services/data-service.js"></script>
+  <script src="../js/services/poi-service.js"></script>
+  <script src="../js/services/itinerary-planner-service.js"></script>
+  <script src="../js/services/wallet-service.js"></script>
+  <script src="../js/pages/itinerary-planner-page.js"></script>
+</body>
+</html>

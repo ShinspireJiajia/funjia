@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>快選查詢｜Fun 嘉</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <link rel="stylesheet" href="../css/style-base.css" />
+  <link rel="stylesheet" href="../css/a11y.css" />
+  <script src="../js/core/i18n-core.js"></script>
+  <script src="../js/core/a11y-init.js"></script>
+  <link rel="stylesheet" href="../css/page-header.css" />
+  <link rel="stylesheet" href="../css/poi-card.css" />
+  <link rel="stylesheet" href="../css/search.css" />
+  <link rel="stylesheet" href="../css/hsr-schedule.css" />
+  <link rel="stylesheet" href="../css/landmark-action-sheet.css" />
+  <link rel="stylesheet" href="../css/map-view.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1 id="searchTitle">快選查詢</h1>
+  </header>
+
+  <div class="search-page">
+    <div class="search-tabs" id="searchTabs"></div>
+    <div class="search-subtabs" id="searchSubTabs" hidden></div>
+
+    <div id="hsrStationCard" hidden></div>
+
+    <div class="hsr-direction-toggle" id="hsrDirectionToggle" hidden></div>
+
+    <div class="search-filter">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="searchInput" placeholder="輸入名稱或分類關鍵字搜尋" />
+    </div>
+
+    <div class="view-toggle" id="viewToggle" hidden>
+      <button type="button" class="view-toggle__btn is-active" data-view="list">
+        <i class="fa-solid fa-list"></i> 列表
+      </button>
+      <button type="button" class="view-toggle__btn" data-view="map">
+        <i class="fa-solid fa-map-location-dot"></i> 地圖
+      </button>
+    </div>
+
+    <p class="search-result-count" id="resultCount"></p>
+    <div id="searchResults"></div>
+    <div class="map-view" id="mapView" hidden></div>
+  </div>
+
+  <a class="fab-add-poi" id="addPoiFab" href="#" hidden>
+    <i class="fa-solid fa-plus"></i> <span id="addPoiFabLabel">新增</span>
+  </a>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <script src="../js/services/data-service.js"></script>
+  <script src="../js/services/poi-service.js"></script>
+  <script src="../js/services/user-poi-service.js"></script>
+  <script src="../js/services/poi-favorite-service.js"></script>
+  <script src="../js/components/poi-placeholder.js"></script>
+  <script src="../js/core/a11y-tags.js"></script>
+  <script src="../js/components/poi-card-list.js"></script>
+  <script src="../js/components/landmark-action-sheet.js"></script>
+  <script src="../js/components/hsr-schedule.js"></script>
+  <script src="../js/components/map-view.js"></script>
+  <script src="../js/pages/search-page.js"></script>
+</body>
+</html>

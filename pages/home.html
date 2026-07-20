@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>首頁｜Fun 嘉</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style-base.css" />
+  <link rel="stylesheet" href="../css/a11y.css" />
+  <script src="../js/core/i18n-core.js"></script>
+  <script src="../js/core/a11y-init.js"></script>
+  <link rel="stylesheet" href="../css/hero-banner.css" />
+  <link rel="stylesheet" href="../css/poi-card.css" />
+  <link rel="stylesheet" href="../css/weather-card.css" />
+  <link rel="stylesheet" href="../css/quick-select.css" />
+  <link rel="stylesheet" href="../css/home.css" />
+</head>
+<body>
+  <div class="home-page">
+    <!-- 1. 天氣資訊 + 近三日預報 -->
+    <section aria-label="天氣資訊">
+      <div id="weatherCard"></div>
+      <div class="forecast3d-header">
+        <span>近三日預報</span>
+        <a href="#">看更多天氣 <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+      <div class="forecast3d-grid" id="forecast3dGrid"></div>
+      <div class="section-divider"></div>
+    </section>
+
+    <!-- 2. 快選查詢 -->
+    <section>
+      <div class="section-title"><h2>快速查詢</h2></div>
+      <div class="quick-select-grid" id="quickSelectGrid"></div>
+    </section>
+
+    <!-- 3. 精選專區:優惠票券、活動快訊分類選項 -->
+    <section>
+      <div class="section-title">
+        <h2>精選專區</h2>
+      </div>
+      <div class="deal-tiles">
+        <a class="deal-tile deal-tile--coupon" href="deals.html?kind=coupon">
+          <div class="deal-tile__top">
+            <span class="deal-tile__icon"><i class="fa-solid fa-ticket"></i></span>
+            <i class="fa-solid fa-chevron-right deal-tile__arrow"></i>
+          </div>
+          <div class="deal-tile__text">
+            <strong>優惠票券</strong>
+            <span class="desc">店家消費折抵券</span>
+          </div>
+        </a>
+        <a class="deal-tile deal-tile--event" href="deals.html?kind=event">
+          <div class="deal-tile__top">
+            <span class="deal-tile__icon"><i class="fa-solid fa-calendar-days"></i></span>
+            <i class="fa-solid fa-chevron-right deal-tile__arrow"></i>
+          </div>
+          <div class="deal-tile__text">
+            <strong>活動快訊</strong>
+            <span class="desc">近期熱門節慶活動</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 4. 形象資訊:依季節顯示當下最有特色的景點與文案 -->
+    <section id="heroBanner" aria-label="季節主視覺"></section>
+
+    <!-- 5. 推薦專區:推薦行程 -->
+    <section>
+      <div class="section-title">
+        <h2>推薦行程</h2>
+        <a class="link-more" href="search.html?type=attractions">查看更多 <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+      <div class="hscroll" id="hotAttractions"></div>
+    </section>
+
+    <!-- 6. 推薦專區:推薦美食 -->
+    <section>
+      <div class="section-title">
+        <h2>美食嘉+</h2>
+        <a class="link-more" href="search.html?type=shops">查看更多 <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+      <div class="hscroll" id="recommendedFood"></div>
+    </section>
+
+    <!-- 7. 互動功能入口 -->
+    <section>
+      <div class="section-title"><h2>旅行來嘉1</h2></div>
+      <div class="interactive-entries">
+        <a class="interactive-entry tone-wallet" href="carbon-wallet.html">
+          <i class="fa-solid fa-wallet"></i>
+          <strong>減碳錢包</strong>
+          <span class="desc">查看點數、兌換優惠商城好禮</span>
+        </a>
+        <a class="interactive-entry tone-group" href="group-travel.html">
+          <i class="fa-solid fa-people-group"></i>
+          <strong>揪團旅行</strong>
+          <span class="desc">建立/加入揪團,約朋友一起玩</span>
+        </a>
+        <a class="interactive-entry tone-planner" href="group-travel.html?tab=myPlans">
+          <i class="fa-solid fa-suitcase-rolling"></i>
+          <strong>我的旅遊計畫</strong>
+          <span class="desc">查看我建立/加入的旅遊計畫</span>
+        </a>
+        <a class="interactive-entry tone-funjia" href="fun-jia.html">
+          <i class="fa-solid fa-heart"></i>
+          <strong>Fun 嘉推薦行程</strong>
+          <span class="desc">收藏行程、看看大家怎麼玩</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 8. 最新消息預覽 -->
+    <section>
+      <div class="section-title">
+        <h2>嘉義最新消息</h2>
+        <a class="link-more" href="news.html">查看更多 <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+      <div class="card" style="padding: 4px var(--space-md);" id="newsPreview"></div>
+    </section>
+  </div>
+
+  <script src="../js/services/data-service.js"></script>
+  <script src="../js/services/season-service.js"></script>
+  <script src="../js/services/weather-service.js"></script>
+  <script src="../js/services/poi-service.js"></script>
+  <script src="../js/services/user-poi-service.js"></script>
+  <script src="../js/services/poi-favorite-service.js"></script>
+  <script src="../js/services/news-service.js"></script>
+  <script src="../js/components/hero-banner.js"></script>
+  <script src="../js/components/poi-placeholder.js"></script>
+  <script src="../js/core/a11y-tags.js"></script>
+  <script src="../js/components/poi-card-list.js"></script>
+  <script src="../js/components/weather-card.js"></script>
+  <script src="../js/components/quick-select-grid.js"></script>
+  <script src="../js/pages/home-page.js"></script>
+</body>
+</html>

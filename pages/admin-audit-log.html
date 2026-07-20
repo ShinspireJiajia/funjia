@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>操作紀錄｜Fun 嘉後台</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../css/admin-theme.css" />
+  <link rel="stylesheet" href="../css/admin-form.css" />
+  <link rel="stylesheet" href="../css/admin-data-table.css" />
+</head>
+<body>
+  <div class="adm-page">
+    <h2 class="adm-page-title">操作紀錄</h2>
+
+    <div class="adm-card">
+      <div class="adm-card__head"><i class="fa-solid fa-filter"></i> 篩選條件</div>
+      <div class="adm-filter-grid">
+        <div class="adm-field"><label>操作人</label><input type="text" id="fltOperator" placeholder="輸入姓名" /></div>
+        <div class="adm-field"><label>模組</label>
+          <select id="fltModule">
+            <option value="">全部</option>
+            <option value="POI">POI</option>
+            <option value="行程範本">行程範本</option>
+            <option value="活動檔期">活動檔期</option>
+            <option value="行銷/點數">行銷/點數</option>
+            <option value="推播">推播</option>
+            <option value="帳號">帳號</option>
+          </select>
+        </div>
+      </div>
+      <div class="adm-filter-actions"><button type="button" class="adm-btn" id="fltClearBtn">清除所有篩選</button></div>
+    </div>
+
+    <div class="adm-card">
+      <div class="adm-list-head"><div class="adm-list-head__title"><h3>紀錄清單</h3><div class="adm-list-head__stats" id="listStats"></div></div></div>
+      <div id="tableArea"></div>
+    </div>
+  </div>
+
+  <script src="../js/admin/services/admin-account-service.js"></script>
+  <script src="../js/admin/services/admin-audit-service.js"></script>
+  <script src="../js/admin/pages/admin-audit-log-page.js"></script>
+</body>
+</html>

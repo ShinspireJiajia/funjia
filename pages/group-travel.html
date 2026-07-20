@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>揪團旅行｜Fun 嘉</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.7/Sortable.min.js"></script>
+  <link rel="stylesheet" href="../css/style-base.css" />
+  <link rel="stylesheet" href="../css/a11y.css" />
+  <script src="../js/core/i18n-core.js"></script>
+  <script src="../js/core/a11y-init.js"></script>
+  <link rel="stylesheet" href="../css/page-header.css" />
+  <link rel="stylesheet" href="../css/group-travel.css" />
+  <link rel="stylesheet" href="../css/itinerary-planner.css" />
+  <link rel="stylesheet" href="../css/fun-jia.css" />
+  <link rel="stylesheet" href="../css/poi-card.css" />
+</head>
+<body>
+  <header class="page-header">
+    <button class="page-header__back" onclick="history.back()" aria-label="返回"><i class="fa-solid fa-arrow-left"></i></button>
+    <h1 data-i18n="pageTitle.groupTravel">揪團旅行</h1>
+  </header>
+
+  <div class="group-page">
+    <div class="group-tabs">
+      <button class="group-tab is-active" data-panel="createPanel">建立揪團</button>
+      <button class="group-tab" data-panel="myPlansPanel">我的旅遊計畫</button>
+      <button class="group-tab" data-panel="funJiaPanel">Fun 嘉推薦</button>
+      <button class="group-tab" data-panel="myFavoritesPanel">我的收藏</button>
+    </div>
+
+    <!-- 建立揪團:4 步驟精靈(基本設定 → 挑選景點 → 規劃動線 → 確認建立) -->
+    <div class="card group-panel is-active" id="createPanel">
+      <div class="wizard-progress" id="wizardProgress">
+        <div class="wizard-progress__track"><div class="wizard-progress__fill" id="wizardProgressFill"></div></div>
+        <ol class="wizard-progress__steps">
+          <li class="wizard-progress__step is-active" data-step="1"><span class="wizard-progress__dot">1</span><em>基本設定</em></li>
+          <li class="wizard-progress__step" data-step="2"><span class="wizard-progress__dot">2</span><em>挑選景點</em></li>
+          <li class="wizard-progress__step" data-step="3"><span class="wizard-progress__dot">3</span><em>規劃動線</em></li>
+          <li class="wizard-progress__step" data-step="4"><span class="wizard-progress__dot">4</span><em>建立揪團</em></li>
+        </ol>
+      </div>
+
+      <form id="createForm" class="wizard">
+        <!-- Step 1:基本設定 -->
+        <section class="wizard-step is-active" data-step="1">
+          <div class="form-field">
+            <label for="createName">行程名稱</label>
+            <input type="text" id="createName" placeholder="例如:阿里山日出小隊" required />
+          </div>
+          <div class="form-field">
+            <label for="createDate">出遊日期</label>
+            <input type="date" id="createDate" />
+          </div>
+          <button type="button" class="btn btn-primary wizard-next-btn" style="width: 100%" data-next-step="2">
+            下一步:挑選景點 <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </section>
+
+        <!-- Step 2:探索與挑選景點 -->
+        <section class="wizard-step" data-step="2">
+          <p class="planner-hint">
+            選擇想去的景點,系統將依景點間距離、交通方式、停留時長與食宿需求,
+            自動規劃低碳排的最佳參訪順序,採用建議行程還能獲得減碳點數!
+          </p>
+
+          <div class="spot-search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="spotSearch" placeholder="搜尋景點名稱、分類或標籤..." />
+          </div>
+
+          <div class="spot-tag-row" id="spotTagRow"></div>
+          <div class="spot-suggestions" id="spotSuggestions"></div>
+
+          <button type="button" class="manual-add-toggle" id="toggleManualAddBtn">
+            <i class="fa-solid fa-location-dot"></i> 找不到嗎?手動輸入地點名稱或地址
+          </button>
+          <div class="custom-stop-add" id="customStopAddRow" style="display: none">
+            <input type="text" id="customStopInput" placeholder="輸入地點名稱或地址,系統會自動定位" />
+            <button type="button" class="btn btn-outline btn-sm" id="addCustomStopBtn">
+              <i class="fa-solid fa-plus"></i> 加入
+            </button>
+          </div>
+
+          <div class="wizard-nav">
+            <button type="button" class="btn btn-outline wizard-back-btn" data-prev-step="1">
+              <i class="fa-solid fa-arrow-left"></i> 上一步
+            </button>
+          </div>
+
+          <!-- 常駐的「已選景點」狀態列 -->
+          <div class="selected-stops-bar is-empty" id="selectedStopsBar">
+            <button type="button" class="selected-stops-bar__toggle" id="selectedStopsToggleBtn">
+              <span id="selectedStopsCountLabel">尚未選擇任何景點</span>
+              <i class="fa-solid fa-chevron-up"></i>
+            </button>
+            <div class="selected-stops-bar__preview" id="selectedStopsPreview"></div>
+            <button type="button" class="btn btn-primary selected-stops-bar__cta" id="toStep3Btn" data-next-step="3" disabled>
+              請先選擇至少 1 個景點
+            </button>
+          </div>
+        </section>
+
+        <!-- Step 3:排序與偏好設定 -->
+        <section class="wizard-step" data-step="3">
+          <p class="field-hint" id="customStopsHint">尚未加入任何地點。</p>
+          <div class="custom-stops" id="customStopsList"></div>
+
+          <div class="route-options" id="routeOptions">
+            <div class="form-field">
+              <label>行程天數</label>
+              <div class="mode-toggle" id="tripLengthToggle">
+                <button type="button" class="mode-btn" data-length="half"><i class="fa-solid fa-sun"></i> 半日</button>
+                <button type="button" class="mode-btn is-active" data-length="day"><i class="fa-regular fa-sun"></i> 一日</button>
+                <button type="button" class="mode-btn" data-length="multi"><i class="fa-solid fa-calendar-days"></i> 多日</button>
+              </div>
+              <div class="day-stepper" id="dayStepperField" style="display: none">
+                <label for="dayCountInput">天數</label>
+                <input type="number" id="dayCountInput" min="2" max="7" value="2" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label>交通策略</label>
+              <div class="mode-toggle" id="strategyToggle">
+                <button type="button" class="mode-btn" data-strategy="transit"><i class="fa-solid fa-bus"></i> 大眾運輸優先</button>
+                <button type="button" class="mode-btn is-active" data-strategy="balanced"><i class="fa-solid fa-scale-balanced"></i> 均衡</button>
+                <button type="button" class="mode-btn" data-strategy="drive"><i class="fa-solid fa-car"></i> 自駕為主</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-nav">
+            <button type="button" class="btn btn-outline wizard-back-btn" data-prev-step="2">
+              <i class="fa-solid fa-arrow-left"></i> 上一步
+            </button>
+            <button type="button" class="btn btn-primary" id="computeRouteBtn" style="flex: 1">
+              <i class="fa-solid fa-route"></i> 計算最佳動線
+            </button>
+          </div>
+          <p class="field-hint" id="routeComputeHint"></p>
+          <button type="button" class="manual-add-toggle" id="skipComputeBtn">
+            先不計算,直接前往下一步 <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </section>
+
+        <!-- Step 4:確認與建立揪團 -->
+        <section class="wizard-step" data-step="4">
+          <p class="field-hint" id="routePlanHint"></p>
+          <div class="route-plan-result" id="routePlanResult"></div>
+
+          <div class="form-field">
+            <label for="createNickname">您的暱稱</label>
+            <input type="text" id="createNickname" placeholder="輸入暱稱" required />
+          </div>
+
+          <label class="checkbox-field">
+            <input type="checkbox" id="inviteFriendsCheckbox" checked />
+            <span>建立後立即邀請好友一起規劃</span>
+          </label>
+
+          <div class="wizard-nav">
+            <button type="button" class="btn btn-outline wizard-back-btn" data-prev-step="3">
+              <i class="fa-solid fa-arrow-left"></i> 上一步
+            </button>
+            <button type="submit" class="btn btn-primary" style="flex: 1">
+              <i class="fa-solid fa-people-group"></i> 建立揪團
+            </button>
+          </div>
+        </section>
+      </form>
+      <div class="group-result" id="createResult"></div>
+    </div>
+
+    <!-- 我的旅遊計畫:加入揪團 + 我建立/加入的旅遊計畫列表 -->
+    <div class="card group-panel" id="myPlansPanel">
+      <h3 class="section-title-plain section-title-plain--tight">加入揪團</h3>
+      <button type="button" class="btn btn-outline" id="joinToggleBtn" style="width: 100%">
+        <i class="fa-solid fa-right-to-bracket"></i> 加入揪團
+      </button>
+      <form id="joinForm" class="join-panel">
+        <div class="form-field">
+          <label for="joinCode">揪團代碼</label>
+          <input type="text" id="joinCode" placeholder="輸入 6 位代碼" style="text-transform: uppercase" required />
+        </div>
+        <div class="form-field">
+          <label for="joinNickname">您的暱稱</label>
+          <input type="text" id="joinNickname" placeholder="輸入暱稱" required />
+        </div>
+        <button type="submit" class="btn btn-accent" style="width: 100%">
+          <i class="fa-solid fa-right-to-bracket"></i> 確認加入
+        </button>
+      </form>
+      <div class="group-result" id="joinResult"></div>
+      <p class="group-error" id="joinError"></p>
+
+      <h3 class="section-title-plain">我的旅遊計畫</h3>
+      <div id="myGroupsList"></div>
+    </div>
+
+    <!-- Fun 嘉推薦:規劃時可切換查看平台推薦行程,作為建立揪團的靈感參考 -->
+    <div class="card group-panel" id="funJiaPanel">
+      <div class="fun-jia-toolbar">
+        <p style="font-size: 12.5px; color: var(--color-text-muted); margin: 0">
+          由平台策展的推薦行程,喜歡就按愛心收藏。看到喜歡的行程,點選「建立揪團」可直接帶著這個行程的景點開始規劃。
+        </p>
+        <select class="fun-jia-sort" id="funJiaSortSelect">
+          <option value="default">預設排序</option>
+          <option value="popularity">熱門度(收藏數)</option>
+        </select>
+      </div>
+      <div id="funJiaItinList"></div>
+    </div>
+
+    <!-- 我的收藏:區分「收藏的行程」(Fun 嘉推薦)與「收藏的景點」(快選查詢:景點/店家/住宿) -->
+    <div class="card group-panel" id="myFavoritesPanel">
+      <div class="my-fav-tabs" id="myFavSubTabs">
+        <button type="button" class="my-fav-tab is-active" data-view="itineraries">收藏的行程</button>
+        <button type="button" class="my-fav-tab" data-view="pois">收藏的景點</button>
+      </div>
+      <div class="my-fav-view is-active" id="myFavItinView">
+        <div id="myFavItinList"></div>
+      </div>
+      <div class="my-fav-view" id="myFavPoiView">
+        <div id="myFavPoiList"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/services/data-service.js"></script>
+  <script src="../js/services/itinerary-service.js"></script>
+  <script src="../js/services/poi-service.js"></script>
+  <script src="../js/services/user-poi-service.js"></script>
+  <script src="../js/services/poi-favorite-service.js"></script>
+  <script src="../js/services/group-service.js"></script>
+  <script src="../js/services/geocode-service.js"></script>
+  <script src="../js/services/itinerary-planner-service.js"></script>
+  <script src="../js/services/wallet-service.js"></script>
+  <script src="../js/components/poi-placeholder.js"></script>
+  <script src="../js/core/a11y-tags.js"></script>
+  <script src="../js/components/poi-card-list.js"></script>
+  <script src="../js/pages/group-travel-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>角色權限矩陣｜Fun 嘉後台</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../css/admin-theme.css" />
+  <link rel="stylesheet" href="../css/admin-form.css" />
+  <link rel="stylesheet" href="../css/admin-data-table.css" />
+</head>
+<body>
+  <div class="adm-page">
+    <h2 class="adm-page-title">角色權限矩陣</h2>
+
+    <div class="adm-card">
+      <div class="adm-card__head"><i class="fa-solid fa-shield-halved"></i> 模組 × 動作權限設定</div>
+      <div id="matrixArea"></div>
+      <p class="adm-hint">點擊任一格可依「無權限 → 唯讀 → 新增/編輯 → 審核 → 全權」循環切換,異動立即生效並寫入操作紀錄。</p>
+    </div>
+  </div>
+
+  <script src="../js/admin/services/admin-account-service.js"></script>
+  <script src="../js/admin/services/admin-audit-service.js"></script>
+  <script src="../js/admin/pages/admin-roles-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>推薦行程詳情｜Fun 嘉</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style-base.css" />
+  <link rel="stylesheet" href="../css/a11y.css" />
+  <script src="../js/core/i18n-core.js"></script>
+  <script src="../js/core/a11y-init.js"></script>
+  <link rel="stylesheet" href="../css/detail.css" />
+  <link rel="stylesheet" href="../css/fun-jia.css" />
+  <link rel="stylesheet" href="../css/itin-detail.css" />
+</head>
+<body>
+  <div class="detail-hero" id="detailHero">
+    <button class="detail-back-btn" onclick="history.back()" aria-label="返回">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+  </div>
+
+  <div class="detail-body">
+    <div class="detail-title-row">
+      <h1 id="itinName"></h1>
+      <button class="fav-btn" id="itinFavBtn"></button>
+    </div>
+
+    <div class="itin-detail-meta" id="itinMeta"></div>
+
+    <p class="itin-detail-summary" id="itinSummary"></p>
+
+    <div class="card itin-detail-carbon" id="itinCarbon"></div>
+
+    <div class="card itin-detail-section">
+      <h2>行程規劃</h2>
+      <ol class="stop-list" id="itinStops"></ol>
+    </div>
+
+    <div class="card itin-detail-section">
+      <h2>旅人留言 <span id="itinCommentCount"></span></h2>
+      <div class="comment-list" id="itinCommentList"></div>
+      <div class="comment-photo-preview" id="itinCommentPhotoPreview"></div>
+      <div class="comment-form">
+        <input class="nickname" id="itinNickname" placeholder="暱稱" />
+        <input class="text" id="itinCommentText" placeholder="留下您的想法..." />
+        <label class="comment-photo-btn" for="itinCommentPhotoInput" title="新增照片(最多 2 張)">
+          <i class="fa-regular fa-image"></i>
+        </label>
+        <input type="file" id="itinCommentPhotoInput" accept="image/*" multiple hidden />
+        <button class="comment-submit" id="itinCommentSubmit">送出</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/services/data-service.js"></script>
+  <script src="../js/services/itinerary-service.js"></script>
+  <script src="../js/components/poi-placeholder.js"></script>
+  <script src="../js/pages/itin-detail-page.js"></script>
+</body>
+</html>

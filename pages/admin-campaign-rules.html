@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>派點規則設定｜Fun 嘉後台</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../css/admin-theme.css" />
+  <link rel="stylesheet" href="../css/admin-form.css" />
+  <link rel="stylesheet" href="../css/admin-data-table.css" />
+</head>
+<body>
+  <div class="adm-page">
+    <h2 class="adm-page-title">派點規則設定</h2>
+
+    <div class="adm-card">
+      <div class="adm-list-head">
+        <div class="adm-list-head__title">
+          <h3>減碳點數觸發規則</h3>
+          <div class="adm-list-head__stats" id="listStats"></div>
+        </div>
+      </div>
+      <div id="tableArea"></div>
+    </div>
+
+    <div class="adm-card">
+      <div class="adm-card__head"><i class="fa-solid fa-plus"></i> 新增規則</div>
+      <div class="adm-filter-grid">
+        <div class="adm-field"><label>觸發事件</label><input type="text" id="ruleEvent" placeholder="例如 完成低碳打卡任務" /></div>
+        <div class="adm-field"><label>點數</label><input type="text" id="rulePoints" placeholder="例如 +20" /></div>
+        <div class="adm-field"><label>每日上限</label><input type="text" id="ruleDailyCap" placeholder="例如 3 次,無上限請留空" /></div>
+        <div class="adm-field"><label>冷卻時間</label><input type="text" id="ruleCooldown" placeholder="例如 30 分鐘,無需請留空" /></div>
+      </div>
+      <div class="adm-filter-actions">
+        <button type="button" class="adm-btn primary" id="addRuleBtn"><i class="fa-solid fa-plus"></i> 新增為草稿</button>
+      </div>
+      <p class="adm-hint">新增規則預設為「草稿」,確認無誤後於清單中按「啟用」上線。</p>
+    </div>
+
+    <div class="adm-card">
+      <div class="adm-card__head"><i class="fa-solid fa-wallet"></i> 點數帳本查詢</div>
+      <div class="adm-filter-grid">
+        <div class="adm-field"><label>會員編號 / 手機號碼</label><input type="text" id="ledgerMember" placeholder="例如 U240105002" /></div>
+      </div>
+      <div class="adm-filter-actions">
+        <button type="button" class="adm-btn primary" id="ledgerQueryBtn">查詢帳本</button>
+      </div>
+      <div id="ledgerArea"></div>
+      <p class="adm-hint">示範階段僅有單一裝置的示範錢包(對應前台減碳錢包),正式上線需依會員編號查詢後端資料庫的帳本紀錄。</p>
+    </div>
+  </div>
+
+  <script src="../js/services/wallet-service.js"></script>
+  <script src="../js/admin/services/admin-account-service.js"></script>
+  <script src="../js/admin/services/admin-audit-service.js"></script>
+  <script src="../js/admin/services/admin-point-rule-service.js"></script>
+  <script src="../js/admin/pages/admin-campaign-rules-page.js"></script>
+</body>
+</html>

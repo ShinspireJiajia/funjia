@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>減碳錢包｜Fun 嘉</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style-base.css" />
+  <link rel="stylesheet" href="../css/a11y.css" />
+  <script src="../js/core/i18n-core.js"></script>
+  <script src="../js/core/a11y-init.js"></script>
+  <link rel="stylesheet" href="../css/page-header.css" />
+  <link rel="stylesheet" href="../css/more.css" />
+  <link rel="stylesheet" href="../css/carbon-wallet.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1 data-i18n="pageTitle.carbonWallet">減碳錢包</h1>
+  </header>
+
+  <div class="wallet-page">
+    <div class="wallet-hero">
+      <span class="wallet-hero__icon"><i class="fa-solid fa-wallet"></i></span>
+      <p class="wallet-hero__label">目前減碳點數</p>
+      <p class="wallet-hero__balance" id="walletBalance">0</p>
+      <p class="wallet-hero__hint">採用低碳行程建議,即可依減碳量獲得點數</p>
+    </div>
+
+    <a class="btn btn-primary wallet-cta" href="rewards-mall.html">
+      <i class="fa-solid fa-store"></i> 前往優惠商城兌換好禮
+    </a>
+
+    <h2 class="section-title-plain">怎麼獲得點數</h2>
+    <div class="card more-list wallet-earn-list">
+      <a class="more-item" href="deals.html?kind=mission">
+        <span class="more-item__icon tone-mission"><i class="fa-solid fa-flag-checkered"></i></span>
+        <span class="more-item__body">
+          <strong>完成任務</strong>
+          <span class="desc">探索、文化、低碳任務,打卡/問答/掃碼完成即可獲得點數</span>
+        </span>
+        <i class="fa-solid fa-chevron-right more-item__arrow"></i>
+      </a>
+      <a class="more-item" href="group-travel.html">
+        <span class="more-item__icon tone-group"><i class="fa-solid fa-people-group"></i></span>
+        <span class="more-item__body">
+          <strong>揪團旅行</strong>
+          <span class="desc">建立揪團行程,計算並採用低碳動線建議,和朋友一起獲得點數</span>
+        </span>
+        <i class="fa-solid fa-chevron-right more-item__arrow"></i>
+      </a>
+      <a class="more-item" href="fun-jia.html">
+        <span class="more-item__icon tone-funjia"><i class="fa-solid fa-heart"></i></span>
+        <span class="more-item__body">
+          <strong>Fun 嘉推薦行程</strong>
+          <span class="desc">挑一個平台推薦行程作為揪團雛型,調整動線後即可獲得點數</span>
+        </span>
+        <i class="fa-solid fa-chevron-right more-item__arrow"></i>
+      </a>
+    </div>
+
+    <h2 class="section-title-plain">點數紀錄</h2>
+    <div class="card wallet-history" id="walletHistory"></div>
+  </div>
+
+  <script src="../js/services/data-service.js"></script>
+  <script src="../js/services/wallet-service.js"></script>
+  <script src="../js/pages/carbon-wallet-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>發送推播｜Fun 嘉後台</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../css/admin-theme.css" />
+  <link rel="stylesheet" href="../css/admin-form.css" />
+  <link rel="stylesheet" href="../css/admin-data-table.css" />
+</head>
+<body>
+  <div class="adm-page">
+    <h2 class="adm-page-title">發送推播</h2>
+
+    <div class="adm-grid-2">
+      <div class="adm-card">
+        <div class="adm-card__head"><i class="fa-solid fa-pen"></i> 編輯內容</div>
+        <div class="adm-field" style="margin-bottom:12px;"><label>標題</label><input type="text" id="pushTitle" placeholder="例如 阿里山森林鐵路祝山線加開日出班次" /></div>
+        <div class="adm-field" style="margin-bottom:12px;"><label>摘要</label><input type="text" id="pushSummary" placeholder="一行摘要,會顯示於最新消息列表" /></div>
+        <div class="adm-field" style="margin-bottom:12px;"><label>內文</label><textarea id="pushContent" placeholder="完整內容"></textarea></div>
+        <div class="adm-field" style="margin-bottom:12px;"><label>分類</label>
+          <select id="pushCategory">
+            <option>交通資訊</option><option>在地優惠</option><option>低碳旅遊</option><option>活動快訊</option>
+          </select>
+        </div>
+        <div class="adm-field" style="margin-bottom:8px;"><label>受眾</label></div>
+        <div class="adm-chip-row" id="audienceChips">
+          <button type="button" class="adm-tag-chip on" data-audience="全體使用者">全體使用者</button>
+          <button type="button" class="adm-tag-chip" data-audience="常瀏覽「阿里山」地區">常瀏覽「阿里山」地區</button>
+          <button type="button" class="adm-tag-chip" data-audience="賞櫻愛好者標籤">賞櫻愛好者標籤</button>
+          <button type="button" class="adm-tag-chip" data-audience="測試帳號">測試帳號</button>
+        </div>
+        <div class="adm-field" style="margin-top:12px;"><label>排程發送時間(留空即為立即發送)</label><input type="datetime-local" id="pushSchedule" /></div>
+        <div class="adm-filter-actions">
+          <button type="button" class="adm-btn" id="saveDraftBtn">儲存草稿</button>
+          <button type="button" class="adm-btn primary" id="sendBtn">預覽並發送</button>
+        </div>
+      </div>
+
+      <div class="adm-card">
+        <div class="adm-card__head"><i class="fa-solid fa-chart-line"></i> 近期發送成效</div>
+        <div id="sentArea"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/services/news-service.js"></script>
+  <script src="../js/admin/services/admin-account-service.js"></script>
+  <script src="../js/admin/services/admin-audit-service.js"></script>
+  <script src="../js/admin/pages/admin-push-compose-page.js"></script>
+</body>
+</html>

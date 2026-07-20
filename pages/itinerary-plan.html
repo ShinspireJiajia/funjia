@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>旅遊計畫詳情｜Fun 嘉</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style-base.css" />
+  <link rel="stylesheet" href="../css/a11y.css" />
+  <script src="../js/core/i18n-core.js"></script>
+  <script src="../js/core/a11y-init.js"></script>
+  <link rel="stylesheet" href="../css/page-header.css" />
+  <link rel="stylesheet" href="../css/group-travel.css" />
+  <link rel="stylesheet" href="../css/itinerary-planner.css" />
+  <link rel="stylesheet" href="../css/itinerary-plan.css" />
+</head>
+<body>
+  <header class="page-header">
+    <button class="page-header__back" onclick="history.back()" aria-label="返回"><i class="fa-solid fa-arrow-left"></i></button>
+    <h1 data-i18n="pageTitle.itineraryPlan">旅遊計畫</h1>
+  </header>
+
+  <div class="plan-page">
+    <div class="empty-state" id="planNotFound" style="display: none">
+      <i class="fa-regular fa-face-frown"></i>
+      <p>找不到這個旅遊計畫,可能已被刪除或連結有誤。</p>
+    </div>
+
+    <div id="planContent" style="display: none">
+      <div class="card plan-detail__header" id="planHeader"></div>
+      <div id="planStopsHtml"></div>
+      <div class="card plan-detail__actions" id="planActions"></div>
+      <div class="card plan-detail__edit" id="planEdit" style="display: none"></div>
+    </div>
+  </div>
+
+  <script src="../js/services/data-service.js"></script>
+  <script src="../js/services/group-service.js"></script>
+  <script src="../js/pages/itinerary-plan-page.js"></script>
+</body>
+</html>

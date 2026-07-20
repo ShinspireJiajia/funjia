@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>詳情｜Fun 嘉</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style-base.css" />
+  <link rel="stylesheet" href="../css/a11y.css" />
+  <link rel="stylesheet" href="../css/detail.css" />
+  <script src="../js/core/i18n-core.js"></script>
+  <script src="../js/core/a11y-init.js"></script>
+</head>
+<body>
+  <div class="detail-hero" id="detailHero">
+    <button class="detail-back-btn" onclick="history.back()" aria-label="返回">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+  </div>
+
+  <div class="detail-body">
+    <div class="detail-title-row">
+      <h1 id="detailName"></h1>
+      <span class="detail-rating" id="detailRating"></span>
+    </div>
+    <div class="detail-tags" id="detailTags"></div>
+    <div class="detail-a11y-tags" id="detailA11yTags"></div>
+
+    <div class="card detail-info-list" id="detailInfoList"></div>
+    <div class="detail-actions" id="detailActions"></div>
+
+    <div id="lowCarbonBanner"></div>
+
+    <div class="card detail-routes" id="detailRoutes" style="display: none"></div>
+
+    <div class="card detail-nearby" id="detailNearbyParking" style="display: none"></div>
+
+    <div class="card detail-nearby" id="detailNearbyBus" style="display: none"></div>
+
+    <div class="card detail-desc">
+      <h2>介紹</h2>
+      <p id="detailDescription"></p>
+    </div>
+  </div>
+
+  <script src="../js/services/data-service.js"></script>
+  <script src="../js/services/poi-service.js"></script>
+  <script src="../js/services/user-poi-service.js"></script>
+  <script src="../js/services/route-service.js"></script>
+  <script src="../js/components/poi-placeholder.js"></script>
+  <script src="../js/core/a11y-tags.js"></script>
+  <script src="../js/pages/detail-page.js"></script>
+</body>
+</html>

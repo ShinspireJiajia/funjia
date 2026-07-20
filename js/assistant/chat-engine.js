@@ -11,6 +11,8 @@ window.FunJia = window.FunJia || {};
   "use strict";
 
   var LOCATION_ALIASES = {
+    "太保": "taibao",
+    taibao: "taibao",
     "阿里山": "alishan",
     alishan: "alishan",
     アリサン: "alishan",
@@ -22,6 +24,10 @@ window.FunJia = window.FunJia || {};
     dongshi: "dongshi",
     "布袋": "budai",
     budai: "budai",
+    "民雄": "minsyong",
+    minsyong: "minsyong",
+    "大埔": "dapu",
+    dapu: "dapu",
   };
 
   var KEYWORDS = {
